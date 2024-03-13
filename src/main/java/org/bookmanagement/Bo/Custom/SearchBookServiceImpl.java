@@ -6,7 +6,7 @@ import org.bookmanagement.Dao.BookRepository;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dto.BookDto;
 import org.bookmanagement.Entity.Books;
-import org.bookmanagement.util.SessionFactoryConfiguration;
+import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 
 import java.util.List;

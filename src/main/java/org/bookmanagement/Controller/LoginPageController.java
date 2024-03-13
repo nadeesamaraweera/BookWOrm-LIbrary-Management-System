@@ -23,7 +23,7 @@ public class LoginPageController implements Initializable {
     public TextField PasswordTextFild;
     public Button viewPass;
     public TextField Username;
-    public CheckBox MemberCheckBox;
+    public CheckBox UserCheckBox;
     public CheckBox AdminCheckBox;
 
     Boolean flag = false;
@@ -57,7 +57,7 @@ public class LoginPageController implements Initializable {
     }
 
     public void LoginOnActhion(ActionEvent actionEvent) {
-        if (MemberCheckBox.isSelected()){
+        if (UserCheckBox.isSelected()){
             Member_login();
         } else if (AdminCheckBox.isSelected()) {
             Admin_Login();

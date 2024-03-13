@@ -10,7 +10,7 @@ import org.bookmanagement.Entity.Book_Transaction;
 import org.bookmanagement.Entity.Books;
 import org.bookmanagement.Entity.BorrowBook;
 import org.bookmanagement.Entity.Member;
-import org.bookmanagement.util.SessionFactoryConfiguration;
+import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

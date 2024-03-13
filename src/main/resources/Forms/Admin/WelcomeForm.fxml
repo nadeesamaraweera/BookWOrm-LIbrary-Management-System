@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="531.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.WelcomeFormController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/img/welcomePage.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progess" layoutY="675.0" prefHeight="24.0" prefWidth="1352.0" progress="0.0" />
+      <Label fx:id="label" layoutX="2.0" layoutY="632.0" prefHeight="41.0" prefWidth="675.0" textFill="#b9910c">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="231.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BookWorm" wrappingWidth="272.76806640625">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <Text layoutX="198.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Online Library" wrappingWidth="349.0856628417969">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Text>
+      <Text fill="#7b5703" layoutX="223.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libraries change lives for the better.">
+         <font>
+            <Font name="Perpetua" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

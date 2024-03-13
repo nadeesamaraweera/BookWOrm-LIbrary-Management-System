@@ -5,7 +5,7 @@ import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.MemberDto;
 import org.bookmanagement.Entity.Member;
-import org.bookmanagement.util.SessionFactoryConfiguration;
+import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

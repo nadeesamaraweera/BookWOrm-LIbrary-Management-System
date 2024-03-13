@@ -4,7 +4,7 @@ import org.bookmanagement.Bo.MemberService;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Entity.Member;
-import org.bookmanagement.util.SessionFactoryConfiguration;
+import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 
 public class MemberServiceImpl implements MemberService {
