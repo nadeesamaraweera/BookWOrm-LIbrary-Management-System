@@ -5,19 +5,91 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="686.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.Save.SaveBookFromController">
+<AnchorPane prefHeight="624.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.Save.SaveBookFromController">
    <children>
-      <ImageView fitHeight="686.0" fitWidth="600.0" layoutX="230.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="98.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="168.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="155.0" layoutY="84.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />
+      <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="27.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/Table_Load/saveBook.png" />
+            <Image url="@../../../img/bookUpdate.png" />
          </image>
       </ImageView>
-      <TextField fx:id="title" layoutX="14.0" layoutY="172.0" prefHeight="39.0" prefWidth="521.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
-      <TextField fx:id="autor" layoutX="14.0" layoutY="271.0" prefHeight="39.0" prefWidth="521.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
-      <TextField fx:id="Genre" layoutX="14.0" layoutY="381.0" prefHeight="39.0" prefWidth="521.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
-      <TextField fx:id="dis" layoutX="14.0" layoutY="491.0" prefHeight="39.0" prefWidth="521.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
-      <Button layoutX="14.0" layoutY="597.0" mnemonicParsing="false" onAction="#saveBtnOnActhion" opacity="0.0" prefHeight="58.0" prefWidth="277.0" text="Button" />
+      <TextField fx:id="title" layoutX="75.0" layoutY="163.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="Genre" layoutX="78.0" layoutY="368.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="autor" layoutX="77.0" layoutY="263.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="75.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="78.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="77.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="209.0" layoutY="563.0" mnemonicParsing="false" onAction="#saveBtnOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="dis" layoutX="79.0" layoutY="472.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="80.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discretion">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

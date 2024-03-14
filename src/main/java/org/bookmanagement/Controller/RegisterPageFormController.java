@@ -128,7 +128,7 @@ public class RegisterPageFormController implements Initializable {
 
         if (register != -1){
 
-            new Alert(Alert.AlertType.INFORMATION,"User Id is : M0"+register).show();
+            new Alert(Alert.AlertType.INFORMATION,"User Id is : UI"+register).show();
 
             Parent parent = null;
 

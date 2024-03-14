@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="684.0" prefWidth="1169.0" stylesheets="@../../img/Styles/RegiterPage.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.AdminRegisterFormController">
    <children>
-      <ImageView fitHeight="786.0" fitWidth="1183.0" layoutX="-14.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="786.0" fitWidth="1183.0" layoutX="-14.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" styleClass="text_New_Account">
          <image>
             <Image url="@../../img/adminregister.png" />
          </image>
@@ -99,7 +99,7 @@
          </font>
       </Text>
       <Button layoutX="118.0" layoutY="579.0" minWidth="185.0" mnemonicParsing="false" onAction="#RegisterbtnOnActhion" prefHeight="40.0" prefWidth="327.0" styleClass="buttonLogin" stylesheets="@../../img/Styles/LoginPage.css" text="SignUp" />
-      <Text layoutX="65.0" layoutY="676.0" onMouseClicked="#loginBtnOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
+      <Text layoutX="137.0" layoutY="677.0" onMouseClicked="#loginBtnOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -120,7 +120,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#664509db" layoutX="10.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" User?">
+      <Text fill="#664509db" layoutX="1.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Admin?">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

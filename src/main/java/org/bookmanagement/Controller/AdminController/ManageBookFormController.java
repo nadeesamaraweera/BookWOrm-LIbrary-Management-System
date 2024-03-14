@@ -54,7 +54,7 @@ public class ManageBookFormController implements Initializable {
         ArrayList<BookDto> all = manageBookService.getAll();
 
         for (int i = 0; i < all.size(); i++) {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/bookRow.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/View/bookRow.fxml"));
             Parent laodNode = fxmlLoader.load();
             BookRowController bookRowController = fxmlLoader.getController();
             bookRowController.setData(all.get(i));

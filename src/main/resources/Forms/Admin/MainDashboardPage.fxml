@@ -5,19 +5,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="background" stylesheets="@../../img/Styles/DashBoardPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.MainDashboardFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1534.0" style="-fx-background-color: F3AE28;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.MainDashboardFormController">
    <children>
-      <ImageView fitHeight="1075.0" fitWidth="423.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="856.0" fitWidth="134.0" layoutX="29.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/DashbordMenu.png" />
+            <Image url="@../../img/dashboard1.png" />
          </image>
       </ImageView>
-      <Button layoutX="102.0" layoutY="223.0" mnemonicParsing="false" onAction="#DashboardbtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="Dash_icon" />
-      <Button layoutX="102.0" layoutY="349.0" mnemonicParsing="false" onAction="#ManageBookOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="book_View" />
-      <Button layoutX="103.0" layoutY="474.0" minWidth="68.0" mnemonicParsing="false" onAction="#ManageBranchOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="branch" />
-      <Button layoutX="103.0" layoutY="601.0" minWidth="72.0" mnemonicParsing="false" onAction="#ReturnBookBtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="book_return" />
-      <Button layoutX="102.0" layoutY="865.0" minWidth="74.0" mnemonicParsing="false" onAction="#ExitBtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="Log_Out" />
-      <AnchorPane fx:id="ChangePane" layoutX="286.0" layoutY="2.0" prefHeight="1082.0" prefWidth="1611.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Button layoutX="101.0" layoutY="731.0" minWidth="72.0" mnemonicParsing="false" onAction="#UserbtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="user" />
+      <Button layoutX="55.0" layoutY="117.0" mnemonicParsing="false" onAction="#DashboardbtnOnActhion" styleClass="Dash_icon" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <Button layoutX="54.0" layoutY="222.0" mnemonicParsing="false" onAction="#ManageBookOnActhion" styleClass="book_View" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <Button layoutX="54.0" layoutY="326.0" mnemonicParsing="false" onAction="#ManageBranchOnActhion" styleClass="branch" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <Button layoutX="54.0" layoutY="434.0" mnemonicParsing="false" onAction="#ReturnBookBtnOnActhion" styleClass="book_return" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <Button layoutX="56.0" layoutY="548.0" mnemonicParsing="false" onAction="#UserbtnOnActhion" styleClass="user" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <Button layoutX="55.0" layoutY="661.0" mnemonicParsing="false" onAction="#ExitBtnOnActhion" styleClass="Log_Out" stylesheets="@../../img/Styles/DashBoardPage.css" />
+      <AnchorPane fx:id="ChangePane" layoutX="250.0" layoutY="20.0" prefHeight="746.0" prefWidth="1230.0" />
    </children>
 </AnchorPane>

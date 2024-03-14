@@ -25,7 +25,7 @@ public class SaveBookFromController {
 
     @FXML
     void saveBtnOnActhion(ActionEvent event) {
-        if (Validation.isValidAddress(this.Genre.getText()) && Validation.isValidName(autor.getText()) && Validation.validateBookTitle(title.getText())){
+//        if (Validation.isValidAddress(this.Genre.getText()) && Validation.isValidName(autor.getText()) && Validation.validateBookTitle(title.getText())){
             ManageBookService manageBookService = (ManageBookService) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Manage_Book);
             int yes = manageBookService.Save(new BookDto(0, title.getText(), autor.getText(), dis.getText(), Genre.getText(), "Yes"));
             if (yes > 0){
@@ -33,14 +33,14 @@ public class SaveBookFromController {
                 autor.setText("");
                 dis.setText("");
                 Genre.setText("");
-                new Alert(Alert.AlertType.INFORMATION, "Saved").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
                 ManageBookFormController manageBookFormController = new ManageBookFormController();
                 manageBookFormController.initialize(null,null);
             }
         }
-        else {
-            new Alert(Alert.AlertType.ERROR, "Invalid Input").show();
-        }
+//        else {
+//            new Alert(Alert.AlertType.ERROR, "Invalid Input").show();
+//        }
     }
 
-}
+

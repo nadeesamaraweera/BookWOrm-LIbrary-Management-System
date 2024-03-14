@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="1082.0" prefWidth="1611.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ReturnBookFromController">
+<AnchorPane prefHeight="736.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ReturnBookFromController">
    <children>
-      <ImageView fitHeight="1082.0" fitWidth="1612.0" layoutX="289.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="33.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Book" wrappingWidth="380.0192565917969">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="82.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Id" wrappingWidth="96.53105163574219">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="MemberIdCombo" layoutX="82.0" layoutY="157.0" onAction="#ComboOnActhion" prefHeight="39.0" prefWidth="376.0" />
+      <TextField fx:id="ReturnData" layoutX="86.0" layoutY="305.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#3b1a04db" layoutX="592.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Count" wrappingWidth="161.5977020263672">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="86.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date" wrappingWidth="153.0643768310547">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="588.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="96.53105163574219">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="93.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" wrappingWidth="96.53105163574219">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Payment" layoutX="92.0" layoutY="453.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="BookCount" layoutX="591.0" layoutY="301.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="Date" layoutX="587.0" layoutY="155.0" prefHeight="39.0" prefWidth="371.0" />
+      <ImageView fitHeight="338.0" fitWidth="537.0" layoutX="579.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/retrunBook.png" />
+            <Image url="@../../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
          </image>
       </ImageView>
-      <TextField layoutX="134.0" layoutY="264.0" prefHeight="52.0" prefWidth="539.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField layoutX="943.0" layoutY="264.0" prefHeight="52.0" prefWidth="539.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField layoutX="941.0" layoutY="428.0" prefHeight="52.0" prefWidth="539.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField layoutX="133.0" layoutY="428.0" prefHeight="52.0" prefWidth="539.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField layoutX="137.0" layoutY="591.0" prefHeight="52.0" prefWidth="539.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <Button layoutX="941.0" layoutY="579.0" mnemonicParsing="false" opacity="0.0" prefHeight="72.0" prefWidth="205.0" text="Button" />
+      <Button layoutX="595.0" layoutY="450.0" mnemonicParsing="false" onAction="#returnBtnOnActhion" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: brown; -fx-background-radius: 8;" text="Return" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

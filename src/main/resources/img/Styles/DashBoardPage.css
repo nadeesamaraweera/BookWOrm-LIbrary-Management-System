@@ -8,7 +8,7 @@
 }
 
 .Dash_icon:hover{
-    -fx-background-image: url('../icon/hover/dashboardhover.png');
+    -fx-background-image: url('../icon/hover/dashboard.png');
 }
 
 .book_View{
@@ -21,7 +21,7 @@
 }
 
 .book_View:hover{
-    -fx-background-image: url('../icon/hover/searchbook.png');
+    -fx-background-image: url('../icon/hover/searchBook.png');
 }
 
 .book_borrow{
@@ -34,7 +34,7 @@
 }
 
 .book_borrow:hover{
-    -fx-background-image: url('../icon/hover/borrwoBook.png');
+    -fx-background-image: url('../icon/hover/borrowBook.png');
 }
 
 .book_return{
@@ -47,7 +47,7 @@
 }
 
 .book_return:hover{
-    -fx-background-image: url('../icon/hover/retrunBook.png');
+    -fx-background-image: url('../icon/hover/returnBook.png');
 }
 
 .Log_Out{
@@ -60,7 +60,7 @@
 }
 
 .Log_Out:hover{
-    -fx-background-image: url('../icon/hover/exit.png');
+    -fx-background-image: url('../icon/hover/exist.png');
 }
 
 .branch{
@@ -91,7 +91,7 @@
 }
 
 .user:hover{
-    -fx-background-image: url('../icon/hover/member.png');
+    -fx-background-image: url('../icon/hover/user.png');
     -fx-background-size: cover;
     -fx-background-color: rgba(0,0,0,0);
     -fx-z-index: 1000;

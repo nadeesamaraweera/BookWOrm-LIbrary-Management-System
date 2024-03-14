@@ -9,26 +9,105 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1082.0" prefWidth="1611.0" stylesheets="@../../img/Styles/AdminDashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ManageBookFormController">
+<AnchorPane prefHeight="746.0" prefWidth="1276.0" stylesheets="@../../img/Styles/AdminDashboard.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ManageBookFormController">
    <children>
-      <ImageView fitHeight="1081.0" fitWidth="1610.0" layoutX="39.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@../../img/manageBook.png" />
-         </image>
-      </ImageView>
-      <CheckBox fx:id="CheckBox" layoutX="45.0" layoutY="235.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="17.0" stylesheets="@../../img/Styles/CheckBox.css" />
-      <Button layoutX="1378.0" layoutY="136.0" mnemonicParsing="false" onAction="#AddBtnOnActhion" opacity="0.0" prefHeight="57.0" prefWidth="145.0" text="asass" />
-      <ScrollPane layoutX="30.0" layoutY="285.0" prefHeight="713.0" prefWidth="1559.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="1543.0">
+      <Text layoutX="15.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Management" wrappingWidth="380.0192565917969">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="67.0" layoutX="20.0" layoutY="146.0" stroke="BLACK" strokeType="INSIDE" width="1038.0" />
+      <Text fill="WHITE" layoutX="98.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="673.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="465.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="262.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="917.0" layoutY="49.0" mnemonicParsing="false" onAction="#AddBtnOnActhion" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="   ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="search" layoutX="62.0" layoutY="73.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="285.0" promptText="Search Here" />
+      <CheckBox fx:id="CheckBox" layoutX="69.0" layoutY="169.0" mnemonicParsing="false" prefWidth="17.0" />
+      <Text fill="WHITE" layoutX="939.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="19.0" layoutY="206.0" prefHeight="483.0" prefWidth="1038.0">
+         <content>
+            <AnchorPane prefHeight="408.0" prefWidth="1046.0">
                <children>
-                  <VBox fx:id="tableLoad" layoutY="47.0" prefHeight="708.0" prefWidth="1544.0" style="-fx-background-color: #FFF;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <VBox fx:id="tableLoad" layoutX="-4.0" layoutY="41.0" prefHeight="440.0" prefWidth="1044.0" />
                </children>
             </AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
-      <TextField fx:id="search" layoutX="73.0" layoutY="124.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="401.0" promptText="Search Here" />
-      <Label layoutX="1175.0" layoutY="137.0" prefHeight="57.0" prefWidth="163.0" style="-fx-background-color: #FFFF;" />
+      <ImageView fitHeight="51.0" fitWidth="130.0" layoutX="767.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/deleteback.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="818.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="62.0" fitWidth="35.0" layoutX="778.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/DELETE.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="35.0" layoutX="927.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/add.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="765.0" layoutY="52.0" prefHeight="43.0" prefWidth="131.0" />
+      <ImageView fitHeight="68.0" fitWidth="35.0" layoutX="26.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Search.png" />
+         </image>
+      </ImageView>
+      <Line endX="168.60000610351562" endY="0.20000457763671875" layoutX="179.0" layoutY="117.0" startX="-141.39999389648438" startY="-7.62939453125E-6" />
    </children>
 </AnchorPane>

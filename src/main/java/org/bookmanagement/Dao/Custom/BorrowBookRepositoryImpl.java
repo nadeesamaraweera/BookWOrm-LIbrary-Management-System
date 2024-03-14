@@ -1,7 +1,10 @@
 package org.bookmanagement.Dao.Custom;
 
+import org.bookmanagement.Bo.Custom.MemberServiceImpl;
 import org.bookmanagement.Dao.BorrowBookRepository;
 import org.bookmanagement.Entity.BorrowBook;
+import org.bookmanagement.Entity.Member;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import java.util.ArrayList;
@@ -11,7 +14,9 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
     private Session session;
     @Override
     public BorrowBook getData(String Id) {
-        return null;
+        Query query = session.createQuery("from BorrowBook where id = :id");
+        query.setParameter("id", 9);
+        return (BorrowBook) query.uniqueResult();
     }
 
     @Override
@@ -26,12 +31,15 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
 
     @Override
     public ArrayList<BorrowBook> getAll() {
-        return null;
+        String sql = "SELECT B FROM BorrowBook As B where B.member = :Member";
+        Query query = session.createQuery(sql);
+        query.setParameter("Member", MemberServiceImpl.member);
+        return (ArrayList<BorrowBook>) query.getResultList();
     }
 
     @Override
     public void Update(BorrowBook Data) {
-
+        session.update(Data);
     }
 
     @Override
@@ -41,11 +49,23 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
 
     @Override
     public long Count() {
-        return 0;
+        String sql = "SELECT SUM(B.payment) FROM BorrowBook AS B";
+        Query query = session.createQuery(sql);
+        Double sum = (Double) query.getSingleResult();
+        return sum != null ? sum.longValue() : 0; // Return 0 if sum is null
     }
 
     @Override
     public void SetSession(Session session) {
         this.session = session;
+    }
+
+    @Override
+    public BorrowBook getData(Member Id) {
+        String sql = "SELECT B FROM BorrowBook As B where B.member = :id and B.status = :status";
+        Query query = session.createQuery(sql);
+        query.setParameter("id", Id);
+        query.setParameter("status", "Pending");
+        return (BorrowBook) query.uniqueResult();
     }
 }

@@ -5,19 +5,91 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="686.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.Save.SaveUserFormController">
+<AnchorPane prefHeight="624.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.Save.SaveUserFormController">
    <children>
-      <ImageView fitHeight="686.0" fitWidth="600.0" layoutX="140.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="88.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="156.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="145.0" layoutY="74.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />
+      <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="17.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/Table_Load/SaveUser.png" />
+            <Image url="@../../../img/UserSave.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" layoutX="17.0" layoutY="161.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="username" layoutX="17.0" layoutY="261.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="email" layoutX="17.0" layoutY="371.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="password" layoutX="17.0" layoutY="481.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <Button layoutX="17.0" layoutY="596.0" mnemonicParsing="false" onAction="#saveBtnOnActhion" opacity="0.0" prefHeight="60.0" prefWidth="273.0" text="Button" />
+      <TextField fx:id="name" layoutX="66.0" layoutY="156.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="62.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="68.0" layoutY="246.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="password" layoutX="73.0" layoutY="440.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="email" layoutX="71.0" layoutY="346.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="68.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="73.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="71.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="191.0" layoutY="512.0" mnemonicParsing="false" onAction="#saveBtnOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

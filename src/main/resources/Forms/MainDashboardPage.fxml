@@ -5,18 +5,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../img/Styles/DashBoardPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.MainDashboardPageFormController">
+<AnchorPane prefHeight="783.0" prefWidth="1541.0" styleClass="background" stylesheets="@../img/Styles/DashBoardPage.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.MainDashboardPageFormController">
    <children>
-      <ImageView fitHeight="1075.0" fitWidth="423.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="782.0" fitWidth="150.0" layoutX="18.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/DashbordMenu.png" />
+            <Image url="@../img/dashboard1.png" />
          </image>
       </ImageView>
-      <Button layoutX="102.0" layoutY="223.0" mnemonicParsing="false" onAction="#DashboardbtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="Dash_icon" />
-      <Button layoutX="102.0" layoutY="369.0" mnemonicParsing="false" onAction="#SearchBookOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="book_View" />
-      <Button layoutX="103.0" layoutY="514.0" minWidth="68.0" mnemonicParsing="false" onAction="#BookBorrowBtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="book_borrow" />
-      <Button layoutX="103.0" layoutY="661.0" minWidth="72.0" mnemonicParsing="false" onAction="#ReturnBookBtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="book_return" />
-      <Button layoutX="102.0" layoutY="810.0" minWidth="74.0" mnemonicParsing="false" onAction="#ExitBtnOnActhion" prefHeight="77.0" prefWidth="77.0" styleClass="Log_Out" />
-      <AnchorPane fx:id="ChangePane" layoutX="286.0" layoutY="2.0" prefHeight="1082.0" prefWidth="1611.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutX="49.0" layoutY="139.0" mnemonicParsing="false" onAction="#DashboardbtnOnActhion" styleClass="Dash_icon" />
+      <Button layoutX="49.0" layoutY="263.0" mnemonicParsing="false" onAction="#SearchBookOnActhion" styleClass="book_View" />
+      <Button layoutX="48.0" layoutY="391.0" mnemonicParsing="false" onAction="#BookBorrowBtnOnActhion" styleClass="book_borrow" />
+      <Button layoutX="46.0" layoutY="520.0" mnemonicParsing="false" onAction="#ReturnBookBtnOnActhion" styleClass="book_return" />
+      <Button layoutX="46.0" layoutY="655.0" mnemonicParsing="false" onAction="#ExitBtnOnActhion" styleClass="Log_Out" />
    </children>
 </AnchorPane>

@@ -69,7 +69,9 @@ public class Validation {
 
     public static boolean validateBookTitle(String title) {
         // Regular expression pattern for validating the book title
-        String regex = "^[\\p{L}\\d\\s'-.&(),:;!?]+$";
+//        String regex = "^[\\p{L}\\d\\s'-.&(),:;!?]+$";
+
+        String regex = "^([a-zA-Z]{4,})$";
 
         // Compile the pattern
         Pattern pattern = Pattern.compile(regex);

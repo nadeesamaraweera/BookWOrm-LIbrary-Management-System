@@ -63,7 +63,7 @@ public class LoginPageController implements Initializable {
             Admin_Login();
         }
         else {
-            new Alert(Alert.AlertType.INFORMATION,"Please select Member or Admin").show();
+            new Alert(Alert.AlertType.INFORMATION,"Please select User or Admin").show();
         }
     }
 
@@ -96,7 +96,7 @@ public class LoginPageController implements Initializable {
             }
         }
         else {
-            new Alert(Alert.AlertType.INFORMATION,"Worng Data has been input").show();
+            new Alert(Alert.AlertType.INFORMATION,"Wrong Data has been input").show();
         }
     }
 

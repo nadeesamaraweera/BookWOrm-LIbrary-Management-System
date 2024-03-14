@@ -2,28 +2,77 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1082.0" prefWidth="1611.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.UserManageFromController">
+<AnchorPane prefHeight="781.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.UserManageFromController">
    <children>
-      <ImageView fitHeight="1082.0" fitWidth="1611.0" layoutX="421.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@../../img/UserForm.png" />
-         </image>
-      </ImageView>
-      <ScrollPane layoutX="30.0" layoutY="315.0" prefHeight="711.0" prefWidth="1564.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="694.0" prefWidth="1548.0">
+      <Text layoutX="61.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="380.0192565917969">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="62.0" layoutX="145.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="1156.0" />
+      <Text fill="WHITE" layoutX="188.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1146.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="838.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="502.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="146.0" layoutY="165.0" prefHeight="586.0" prefWidth="1155.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="1149.0">
                <children>
-                  <VBox fx:id="TableBox" prefHeight="736.0" prefWidth="1548.0" />
+                  <VBox fx:id="TableBox" prefHeight="598.0" prefWidth="1146.0" />
                </children>
             </AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
-      <Button layoutX="1415.0" layoutY="163.0" mnemonicParsing="false" onAction="#AddUserOnActhion" opacity="0.0" prefHeight="47.0" prefWidth="146.0" />
-      <Button layoutX="1149.0" layoutY="162.0" mnemonicParsing="false" onAction="#UpdateuserOnActhion" opacity="0.0" prefHeight="47.0" prefWidth="201.0" />
+      <Button layoutX="1188.0" layoutY="39.0" mnemonicParsing="false" onAction="#AddUserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="1014.0" layoutY="40.0" mnemonicParsing="false" onAction="#UpdateuserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: BLUE; -fx-background-radius: 20;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

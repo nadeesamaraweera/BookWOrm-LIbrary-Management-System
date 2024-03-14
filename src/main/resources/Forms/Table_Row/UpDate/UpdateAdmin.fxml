@@ -5,19 +5,96 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="686.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.Update.UpdateUserFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="686.0" fitWidth="600.0" layoutX="140.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="78.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="182.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="135.0" layoutY="64.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />
+      <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="7.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/Table_Load/updateUser.png" />
+            <Image url="@../../../img/adminupdate.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" layoutX="17.0" layoutY="161.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="username" layoutX="17.0" layoutY="261.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="email" layoutX="17.0" layoutY="371.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="password" layoutX="17.0" layoutY="481.0" prefHeight="52.0" prefWidth="516.0" styleClass="text-field1" stylesheets="@../../../img/Styles/ViewBookPage.css" />
-      <Button layoutX="17.0" layoutY="596.0" mnemonicParsing="false" onAction="#updateBtnOnActhion" opacity="0.0" prefHeight="60.0" prefWidth="273.0" text="Button" />
-      <Button layoutX="317.0" layoutY="596.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" opacity="0.0" prefHeight="60.0" prefWidth="267.0" text="Button" />
+      <TextField fx:id="name" layoutX="56.0" layoutY="146.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="52.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="58.0" layoutY="236.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="password" layoutX="63.0" layoutY="430.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="email" layoutX="61.0" layoutY="336.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#6e3106db" layoutX="58.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="63.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#6e3106db" layoutX="61.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="96.0" layoutY="502.0" mnemonicParsing="false" onAction="#updateBtnOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="295.0" layoutY="503.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
