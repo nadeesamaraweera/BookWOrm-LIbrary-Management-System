@@ -3,13 +3,11 @@ package org.bookmanagement.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +38,7 @@ public class BorrowBook{
 
     @ManyToOne
     @JoinColumn(name = "member_id")
-    private Member member;
+    private User member;
 
     @Column(name = "Payment")
     private double payment;

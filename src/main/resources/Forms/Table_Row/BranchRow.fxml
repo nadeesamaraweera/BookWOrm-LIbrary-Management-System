@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="43.0" prefWidth="1027.0" styleClass="back" stylesheets="@../../../img/Styles/TableRow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BranchRowController">
+<AnchorPane prefHeight="43.0" prefWidth="1027.0" styleClass="back" stylesheets="@../../img/Styles/TableRow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BranchRowController">
    <children>
       <Label fx:id="Id" layoutX="18.0" layoutY="7.0" prefHeight="26.0" prefWidth="50.0" text="Label">
          <font>
@@ -30,11 +30,11 @@
       </Label>
       <Button layoutX="893.0" layoutY="5.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
          <stylesheets>
-            <URL value="@../../../img/Styles/View.css" />
-            <URL value="@../../../img/Styles/TableRow.css" />
+            <URL value="@../../img/Styles/View.css" />
+            <URL value="@../../img/Styles/TableRow.css" />
          </stylesheets>
       </Button>
-      <Button layoutX="941.0" layoutY="5.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../../img/Styles/TableRow.css" />
-      <Button layoutX="988.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../../img/Styles/TableRow.css" />
+      <Button layoutX="941.0" layoutY="5.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../img/Styles/TableRow.css" />
+      <Button layoutX="988.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../img/Styles/TableRow.css" />
    </children>
 </AnchorPane>

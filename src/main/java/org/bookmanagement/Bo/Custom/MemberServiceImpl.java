@@ -3,7 +3,7 @@ package org.bookmanagement.Bo.Custom;
 import org.bookmanagement.Bo.MemberService;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 
@@ -13,12 +13,12 @@ public class MemberServiceImpl implements MemberService {
 
     private Session session;
 
-    public static Member member;
+    public static User member;
     @Override
     public boolean Login(String Username, String Password) {
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
-        Member data = memberRepository.getData(Username);
+        User data = memberRepository.getData(Username);
 
         if (data != null && data.getPassword().equals(Password)){
             member = data;

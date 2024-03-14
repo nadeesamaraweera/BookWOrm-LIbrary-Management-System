@@ -29,9 +29,9 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
     public ArrayList<Integer> getAllId(){
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
-        ArrayList<Member> all = memberRepository.getAll();
+        ArrayList<User> all = memberRepository.getAll();
         ArrayList<Integer> ids = new ArrayList<>();
-        for (Member member : all) {
+        for (User member : all) {
             ids.add(member.getId());
         }
         session.close();
@@ -71,7 +71,7 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
         session = SessionFactoryConfiguration.getInstance().getSession();
         int m = GetIdNumber.getIdNumber("M", value);
         memberRepository.SetSession(session);
-        Member data1 = memberRepository.getData(""+m);
+        User data1 = memberRepository.getData(""+m);
 
         session.close();
 

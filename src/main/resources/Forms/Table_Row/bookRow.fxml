@@ -27,12 +27,12 @@
          </font></Label>
       <Button layoutX="898.0" layoutY="6.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
          <stylesheets>
-            <URL value="@../../../img/Styles/View.css" />
-            <URL value="@../../../img/Styles/TableRow.css" />
+            <URL value="@../../img/Styles/View.css" />
+            <URL value="@../../img/Styles/TableRow.css" />
          </stylesheets>
       </Button>
-      <Button layoutX="946.0" layoutY="6.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../../img/Styles/TableRow.css" />
-      <Button layoutX="993.0" layoutY="6.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../../img/Styles/TableRow.css" />
+      <Button layoutX="946.0" layoutY="6.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../img/Styles/TableRow.css" />
+      <Button layoutX="993.0" layoutY="6.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../img/Styles/TableRow.css" />
       <CheckBox layoutX="14.0" layoutY="12.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>

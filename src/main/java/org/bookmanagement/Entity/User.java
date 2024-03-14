@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @ToString
-public class Member {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ public class Member {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "member")
     private List<BorrowBook> transactions = new ArrayList<>();
 
-    public Member(int Id,String full_name, String username, String password, String email) {
+    public User(int Id, String full_name, String username, String password, String email) {
         this.full_name = full_name;
         this.username = username;
         this.password = password;

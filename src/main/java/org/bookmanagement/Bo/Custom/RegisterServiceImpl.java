@@ -4,7 +4,7 @@ import org.bookmanagement.Bo.RegisterService;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.MemberDto;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -18,7 +18,7 @@ public class RegisterServiceImpl implements RegisterService {
     public int Register(MemberDto member) {
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
-        int saved = memberRepository.saved(new Member(member.getId(),member.getFull_name(),member.getUsername(),member.getPassword(),member.getEmail()));
+        int saved = memberRepository.saved(new User(member.getId(),member.getFull_name(),member.getUsername(),member.getPassword(),member.getEmail()));
         transaction = session.beginTransaction();
         if (saved > 0) {
             transaction.commit();

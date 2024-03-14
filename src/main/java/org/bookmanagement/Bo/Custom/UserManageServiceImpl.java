@@ -4,7 +4,7 @@ import org.bookmanagement.Bo.UserMangeService;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.MemberDto;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -22,11 +22,11 @@ public class UserManageServiceImpl implements UserMangeService {
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
 
-        ArrayList<Member> all = memberRepository.getAll();
+        ArrayList<User> all = memberRepository.getAll();
 
         ArrayList<MemberDto> admins = new ArrayList<>();
 
-        for (Member admin : all) {
+        for (User admin : all) {
             admins.add(new MemberDto(admin.getId(), admin.getFull_name(), admin.getUsername(), admin.getPassword(), admin.getEmail()));
         }
 

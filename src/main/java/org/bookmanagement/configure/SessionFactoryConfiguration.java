@@ -13,7 +13,7 @@ public class SessionFactoryConfiguration {
     private SessionFactoryConfiguration(){
         sessionFactory = new Configuration()
                 .mergeProperties(Utility.getProperties())
-                .addAnnotatedClass(Member.class)
+                .addAnnotatedClass(User.class)
                 .addAnnotatedClass(Admin.class)
                 .addAnnotatedClass(Books.class)
                 .addAnnotatedClass(Branch.class)

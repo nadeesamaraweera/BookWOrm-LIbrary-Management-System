@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 import lombok.SneakyThrows;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
 import org.controlsfx.control.textfield.TextFields;
-import org.bookmanagement.Bo.ManageBookService;
 import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Bo.ManageBookService;
 import org.bookmanagement.Controller.Table_Row.BookRowController;
 import org.bookmanagement.Controller.Table_Row.View.ViewBookFormController;
 import org.bookmanagement.Dto.BookDto;
@@ -54,7 +54,7 @@ public class ManageBookFormController implements Initializable {
         ArrayList<BookDto> all = manageBookService.getAll();
 
         for (int i = 0; i < all.size(); i++) {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/View/bookRow.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/bookRow.fxml"));
             Parent laodNode = fxmlLoader.load();
             BookRowController bookRowController = fxmlLoader.getController();
             bookRowController.setData(all.get(i));

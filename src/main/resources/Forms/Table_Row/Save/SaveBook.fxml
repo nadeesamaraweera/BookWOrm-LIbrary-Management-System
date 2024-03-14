@@ -62,9 +62,9 @@
             <Image url="@../../../img/bookUpdate.png" />
          </image>
       </ImageView>
-      <TextField fx:id="title" layoutX="75.0" layoutY="163.0" prefHeight="39.0" prefWidth="371.0" />
-      <TextField fx:id="Genre" layoutX="78.0" layoutY="368.0" prefHeight="39.0" prefWidth="371.0" />
-      <TextField fx:id="autor" layoutX="77.0" layoutY="263.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="title" layoutX="75.0" layoutY="163.0" prefHeight="39.0" prefWidth="371.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
+      <TextField fx:id="Genre" layoutX="78.0" layoutY="368.0" prefHeight="39.0" prefWidth="371.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
+      <TextField fx:id="autor" layoutX="77.0" layoutY="263.0" prefHeight="39.0" prefWidth="371.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
       <Text fill="#6e3106db" layoutX="75.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -85,7 +85,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <TextField fx:id="dis" layoutX="79.0" layoutY="472.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="dis" layoutX="79.0" layoutY="472.0" prefHeight="39.0" prefWidth="371.0" styleClass="label" stylesheets="@../../../img/Styles/View.css" />
       <Text fill="#6e3106db" layoutX="80.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discretion">
          <font>
             <Font name="System Bold" size="18.0" />

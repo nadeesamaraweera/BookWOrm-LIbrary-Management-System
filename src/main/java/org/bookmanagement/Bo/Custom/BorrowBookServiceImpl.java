@@ -9,12 +9,10 @@ import org.bookmanagement.Dto.BookDto;
 import org.bookmanagement.Entity.Book_Transaction;
 import org.bookmanagement.Entity.Books;
 import org.bookmanagement.Entity.BorrowBook;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.engine.transaction.internal.TransactionImpl;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -48,7 +46,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     @Override
     public boolean saveTransaction(List<String> data) {
 
-        Member member = MemberServiceImpl.member;
+        User member = MemberServiceImpl.member;
 
         List<Books> books = new ArrayList<>();
 

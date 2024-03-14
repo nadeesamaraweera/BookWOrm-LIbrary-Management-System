@@ -4,8 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import org.bookmanagement.Bo.ManageBookService;
 import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Bo.ManageBookService;
 import org.bookmanagement.Controller.AdminController.ManageBookFormController;
 import org.bookmanagement.Dto.BookDto;
 import org.bookmanagement.util.Validation;
@@ -25,7 +25,7 @@ public class SaveBookFromController {
 
     @FXML
     void saveBtnOnActhion(ActionEvent event) {
-//        if (Validation.isValidAddress(this.Genre.getText()) && Validation.isValidName(autor.getText()) && Validation.validateBookTitle(title.getText())){
+        if (Validation.isValidAddress(this.Genre.getText()) && Validation.isValidName(autor.getText()) && Validation.validateBookTitle(title.getText())){
             ManageBookService manageBookService = (ManageBookService) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Manage_Book);
             int yes = manageBookService.Save(new BookDto(0, title.getText(), autor.getText(), dis.getText(), Genre.getText(), "Yes"));
             if (yes > 0){
@@ -38,9 +38,9 @@ public class SaveBookFromController {
                 manageBookFormController.initialize(null,null);
             }
         }
-//        else {
-//            new Alert(Alert.AlertType.ERROR, "Invalid Input").show();
-//        }
+        else {
+            new Alert(Alert.AlertType.ERROR, "Invalid Input").show();
+        }
     }
 
-
+}

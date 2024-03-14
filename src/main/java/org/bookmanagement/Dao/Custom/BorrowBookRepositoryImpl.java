@@ -3,7 +3,7 @@ package org.bookmanagement.Dao.Custom;
 import org.bookmanagement.Bo.Custom.MemberServiceImpl;
 import org.bookmanagement.Dao.BorrowBookRepository;
 import org.bookmanagement.Entity.BorrowBook;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -61,7 +61,7 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
     }
 
     @Override
-    public BorrowBook getData(Member Id) {
+    public BorrowBook getData(User Id) {
         String sql = "SELECT B FROM BorrowBook As B where B.member = :id and B.status = :status";
         Query query = session.createQuery(sql);
         query.setParameter("id", Id);

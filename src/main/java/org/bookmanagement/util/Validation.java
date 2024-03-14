@@ -1,6 +1,10 @@
 package org.bookmanagement.util;
 
+import javafx.scene.control.Alert;
+
 import java.io.InputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,11 +17,11 @@ public class Validation {
     public static boolean MemberValid(String fullName,String bod,int age, String email,String address,InputStream image) {
         return
                 isValidName(fullName) &&
-                isValidBirthdate(bod) &&
-                isValidAge(age) &&
-                isValidEmail(email) &&
-                isValidAddress(address) &&
-                image != null; // Ensure image is not null
+                        isValidBirthdate(bod) &&
+                        isValidAge(age) &&
+                        isValidEmail(email) &&
+                        isValidAddress(address) &&
+                        image != null; // Ensure image is not null
     }
 
     public static boolean MemberValid(String date,String DomainName,int Count) {
@@ -69,9 +73,7 @@ public class Validation {
 
     public static boolean validateBookTitle(String title) {
         // Regular expression pattern for validating the book title
-//        String regex = "^[\\p{L}\\d\\s'-.&(),:;!?]+$";
-
-        String regex = "^([a-zA-Z]{4,})$";
+        String regex = "^[\\p{L}\\d\\s'-.&(),:;!?]+$";
 
         // Compile the pattern
         Pattern pattern = Pattern.compile(regex);

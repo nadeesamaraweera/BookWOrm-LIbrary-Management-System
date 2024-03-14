@@ -3,13 +3,12 @@ package org.bookmanagement.Dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bookmanagement.Entity.BorrowBook;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 
 import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-    @NoArgsConstructor
+
+@NoArgsConstructor
     @AllArgsConstructor
     @Data
     public class BorrowBookDto {
@@ -24,7 +23,7 @@ import java.util.ArrayList;
 
         private Timestamp addedDate;
 
-        private Member member;
+        private User member;
 
 
 

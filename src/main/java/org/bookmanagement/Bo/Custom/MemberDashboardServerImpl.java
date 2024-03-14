@@ -4,7 +4,7 @@ import org.bookmanagement.Bo.MemberDashboardServer;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.MemberDto;
-import org.bookmanagement.Entity.Member;
+import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,7 +17,7 @@ public class MemberDashboardServerImpl implements MemberDashboardServer {
     public MemberDto getData(String username) {
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
-        Member data = memberRepository.getData(username);
+        User data = memberRepository.getData(username);
 
         return new MemberDto(data.getId(), data.getFull_name(), data.getUsername(), data.getPassword(), data.getEmail());
     }
@@ -26,7 +26,7 @@ public class MemberDashboardServerImpl implements MemberDashboardServer {
     public void Update(MemberDto memberDto) {
         session = SessionFactoryConfiguration.getInstance().getSession();
         memberRepository.SetSession(session);
-        memberRepository.Update(new Member(memberDto.getId(), memberDto.getFull_name(), memberDto.getUsername(), memberDto.getPassword(), memberDto.getEmail()));
+        memberRepository.Update(new User(memberDto.getId(), memberDto.getFull_name(), memberDto.getUsername(), memberDto.getPassword(), memberDto.getEmail()));
         transaction = session.beginTransaction();
         transaction.commit();
     }
