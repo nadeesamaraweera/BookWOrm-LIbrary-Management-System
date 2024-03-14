@@ -1,96 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.image.Image?>-->
+<!--<?import javafx.scene.image.ImageView?>-->
+<!--<?import javafx.scene.layout.AnchorPane?>-->
+<!--<?import javafx.scene.paint.Color?>-->
+<!--<?import javafx.scene.paint.LinearGradient?>-->
+<!--<?import javafx.scene.paint.Stop?>-->
+<!--<?import javafx.scene.shape.Line?>-->
+<!--<?import javafx.scene.text.Font?>-->
+<!--<?import javafx.scene.text.Text?>-->
 
-<AnchorPane prefHeight="624.0" prefWidth="495.0" stylesheets="@../../../img/Styles/View.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.View.ViewBookFormController">
-   <children>
-      <Text layoutX="108.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Text>
-      <Text layoutX="178.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Text>
-      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="165.0" layoutY="94.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />
-      <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="37.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/bookUpdate.png" />
-         </image>
-      </ImageView>
-      <Text fill="#6e3106db" layoutX="83.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#6e3106db" layoutX="85.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#6e3106db" layoutX="88.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#6e3106db" layoutX="87.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#6e3106db" layoutX="90.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Label layoutX="440.0" layoutY="30.0" prefHeight="18.0" prefWidth="64.0" />
-      <Label fx:id="Book_Id" layoutX="85.0" layoutY="160.0" prefHeight="39.0" prefWidth="371.0" text="Label" />
-      <Label fx:id="title" layoutX="87.0" layoutY="248.0" prefHeight="39.0" prefWidth="371.0" text="Label" />
-      <Label fx:id="author" layoutX="87.0" layoutY="332.0" prefHeight="39.0" prefWidth="371.0" text="Label" />
-      <Label fx:id="genre" layoutX="89.0" layoutY="415.0" prefHeight="39.0" prefWidth="371.0" text="Label" />
-      <Label fx:id="available" layoutX="89.0" layoutY="504.0" prefHeight="39.0" prefWidth="371.0" text="Label" />
-   </children>
-</AnchorPane>
+<!--<AnchorPane prefHeight="624.0" prefWidth="495.0" stylesheets="@../../../img/Styles/View.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.View.ViewBookFormController">-->
+<!--   <children>-->
+<!--      <Text layoutX="108.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View">-->
+<!--         <fill>-->
+<!--            <LinearGradient endX="1.0" endY="1.0">-->
+<!--               <stops>-->
+<!--                  <Stop>-->
+<!--                     <color>-->
+<!--                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--                  <Stop offset="1.0">-->
+<!--                     <color>-->
+<!--                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--               </stops>-->
+<!--            </LinearGradient>-->
+<!--         </fill>-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="28.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text layoutX="178.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book">-->
+<!--         <fill>-->
+<!--            <LinearGradient endX="1.0" endY="1.0">-->
+<!--               <stops>-->
+<!--                  <Stop>-->
+<!--                     <color>-->
+<!--                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--                  <Stop offset="1.0">-->
+<!--                     <color>-->
+<!--                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--               </stops>-->
+<!--            </LinearGradient>-->
+<!--         </fill>-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="28.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="165.0" layoutY="94.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />-->
+<!--      <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="37.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">-->
+<!--         <image>-->
+<!--            <Image url="@../../../img/bookUpdate.png" />-->
+<!--         </image>-->
+<!--      </ImageView>-->
+<!--      <Text fill="#6e3106db" layoutX="83.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text fill="#6e3106db" layoutX="85.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text fill="#6e3106db" layoutX="88.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text fill="#6e3106db" layoutX="87.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text fill="#6e3106db" layoutX="90.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Label layoutX="440.0" layoutY="30.0" prefHeight="18.0" prefWidth="64.0" />-->
+<!--      <Label fx:id="Book_Id" layoutX="85.0" layoutY="160.0" prefHeight="39.0" prefWidth="371.0" text="Label" />-->
+<!--      <Label fx:id="title" layoutX="87.0" layoutY="248.0" prefHeight="39.0" prefWidth="371.0" text="Label" />-->
+<!--      <Label fx:id="author" layoutX="87.0" layoutY="332.0" prefHeight="39.0" prefWidth="371.0" text="Label" />-->
+<!--      <Label fx:id="genre" layoutX="89.0" layoutY="415.0" prefHeight="39.0" prefWidth="371.0" text="Label" />-->
+<!--      <Label fx:id="available" layoutX="89.0" layoutY="504.0" prefHeight="39.0" prefWidth="371.0" text="Label" />-->
+<!--   </children>-->
+<!--</AnchorPane>-->

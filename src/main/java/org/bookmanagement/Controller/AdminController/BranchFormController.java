@@ -40,7 +40,7 @@ public class BranchFormController {
         ArrayList<BranchDto> all = branchBo.getAll();
         for (BranchDto branchDto : all) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/BranchRow.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/View/BranchRow.fxml"));
                 Parent root = fxmlLoader.load();
                 BranchRowController controller = fxmlLoader.getController();
                 controller.setData(branchDto);

@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
 
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<!--<?import javafx.scene.control.TextField?>-->
+<!--<?import javafx.scene.image.Image?>-->
+<!--<?import javafx.scene.image.ImageView?>-->
+<!--<?import javafx.scene.layout.AnchorPane?>-->
+<!--<?import javafx.scene.paint.Color?>-->
+<!--<?import javafx.scene.paint.LinearGradient?>-->
+<!--<?import javafx.scene.paint.Stop?>-->
+<!--<?import javafx.scene.shape.Line?>-->
+<!--<?import javafx.scene.text.Font?>-->
+<!--<?import javafx.scene.text.Text?>-->
 
-<AnchorPane prefHeight="624.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.View.ViewBranchFormController">
-   <children>
-      <Text layoutX="98.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Text>
-      <Text layoutX="174.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branches">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Text>
-      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="155.0" layoutY="84.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />
-      <ImageView fitHeight="78.0" fitWidth="72.0" layoutX="20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/branchesUpdate.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="name" layoutX="73.0" layoutY="263.0" prefHeight="39.0" prefWidth="371.0" />
-      <Text fill="#6e3106db" layoutX="70.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Name">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="locationtext" layoutX="78.0" layoutY="500.0" prefHeight="39.0" prefWidth="371.0" />
-      <TextField fx:id="email" layoutX="76.0" layoutY="381.0" prefHeight="39.0" prefWidth="371.0" />
-      <Text fill="#6e3106db" layoutX="78.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#6e3106db" layoutX="76.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="Branch_Id" layoutX="71.0" layoutY="151.0" prefHeight="39.0" prefWidth="371.0" />
-      <Text fill="#6e3106db" layoutX="71.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Id">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-   </children>
-</AnchorPane>
+<!--<AnchorPane prefHeight="624.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.View.ViewBranchFormController">-->
+<!--   <children>-->
+<!--      <Text layoutX="98.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View">-->
+<!--         <fill>-->
+<!--            <LinearGradient endX="1.0" endY="1.0">-->
+<!--               <stops>-->
+<!--                  <Stop>-->
+<!--                     <color>-->
+<!--                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--                  <Stop offset="1.0">-->
+<!--                     <color>-->
+<!--                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--               </stops>-->
+<!--            </LinearGradient>-->
+<!--         </fill>-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="28.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text layoutX="174.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branches">-->
+<!--         <fill>-->
+<!--            <LinearGradient endX="1.0" endY="1.0">-->
+<!--               <stops>-->
+<!--                  <Stop>-->
+<!--                     <color>-->
+<!--                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--                  <Stop offset="1.0">-->
+<!--                     <color>-->
+<!--                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />-->
+<!--                     </color>-->
+<!--                  </Stop>-->
+<!--               </stops>-->
+<!--            </LinearGradient>-->
+<!--         </fill>-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="28.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Line endX="360.0000305175781" endY="-21.97265625" layoutX="155.0" layoutY="84.0" startX="-53.10002899169922" startY="-21.97265625" strokeMiterLimit="0.0" />-->
+<!--      <ImageView fitHeight="78.0" fitWidth="72.0" layoutX="20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">-->
+<!--         <image>-->
+<!--            <Image url="@../../../img/branchesUpdate.png" />-->
+<!--         </image>-->
+<!--      </ImageView>-->
+<!--      <TextField fx:id="name" layoutX="73.0" layoutY="263.0" prefHeight="39.0" prefWidth="371.0" />-->
+<!--      <Text fill="#6e3106db" layoutX="70.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Name">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <TextField fx:id="locationtext" layoutX="78.0" layoutY="500.0" prefHeight="39.0" prefWidth="371.0" />-->
+<!--      <TextField fx:id="email" layoutX="76.0" layoutY="381.0" prefHeight="39.0" prefWidth="371.0" />-->
+<!--      <Text fill="#6e3106db" layoutX="78.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <Text fill="#6e3106db" layoutX="76.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--      <TextField fx:id="Branch_Id" layoutX="71.0" layoutY="151.0" prefHeight="39.0" prefWidth="371.0" />-->
+<!--      <Text fill="#6e3106db" layoutX="71.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Id">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="18.0" />-->
+<!--         </font>-->
+<!--      </Text>-->
+<!--   </children>-->
+<!--</AnchorPane>-->

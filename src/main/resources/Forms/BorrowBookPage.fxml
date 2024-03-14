@@ -7,28 +7,93 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1084.0" prefWidth="1611.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.BorrowBookPageFormController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.BorrowBookPageFormController">
    <children>
-      <ImageView fitHeight="1084.0" fitWidth="1613.0" layoutX="280.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrow Book" wrappingWidth="380.0192565917969">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <TextField fx:id="memberIdText" layoutX="96.0" layoutY="166.0" prefHeight="39.0" prefWidth="371.0" />
+      <Text fill="#3b1a04db" layoutX="602.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date" wrappingWidth="161.5977020263672">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="96.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Id" wrappingWidth="153.0643768310547">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b1a04db" layoutX="598.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Title" wrappingWidth="96.53105163574219">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Return_Book" layoutX="601.0" layoutY="283.0" prefHeight="39.0" prefWidth="371.0" />
+      <TextField fx:id="SearchBook" layoutX="597.0" layoutY="164.0" prefHeight="39.0" prefWidth="371.0" />
+      <ImageView fitHeight="587.0" fitWidth="603.0" layoutX="687.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/GetBook.png" />
+            <Image url="@../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
          </image>
       </ImageView>
-      <TextField fx:id="memberIdText" layoutX="165.0" layoutY="149.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="SearchBook" layoutX="935.0" layoutY="149.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="Return_Book" layoutX="936.0" layoutY="315.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
-      <Button layoutX="1255.0" layoutY="410.0" mnemonicParsing="false" onAction="#addBtnOnActhion" prefHeight="64.0" prefWidth="183.0" styleClass="addBtn" stylesheets="@../img/Styles/BorrowBookPage.css" />
-      <Button layoutX="1275.0" layoutY="972.0" mnemonicParsing="false" onAction="#gtOnActhion" prefHeight="73.0" prefWidth="192.0" styleClass="getButton" stylesheets="@../img/Styles/BorrowBookPage.css" />
-      <ScrollPane layoutX="418.0" layoutY="570.0" prefHeight="318.0" prefWidth="767.0">
+      <Button layoutX="1028.0" layoutY="279.0" mnemonicParsing="false" onAction="#addBtnOnActhion" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: blue; -fx-background-radius: 8;" text="     ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#3b1a04db" layoutX="102.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="96.53105163574219">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Date" layoutX="101.0" layoutY="287.0" prefHeight="39.0" prefWidth="371.0" />
+      <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="1039.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="525.0" layoutX="55.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Title.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="55.0" layoutY="444.0" prefHeight="269.0" prefWidth="523.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="765.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="520.0">
                <children>
-                  <VBox fx:id="vBox" layoutX="-3.0" prefHeight="311.0" prefWidth="767.0" style="-fx-background-color: #FFFF;" />
+                  <VBox fx:id="vBox" layoutX="-2.0" prefHeight="286.0" prefWidth="522.0" />
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
-      <TextField fx:id="Date" layoutX="165.0" layoutY="314.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
+      <Button layoutX="594.0" layoutY="668.0" mnemonicParsing="false" onAction="#gtOnActhion" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: GREEN; -fx-background-radius: 20;" text="GET" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@ public class UserManageFromController {
         TableBox.getChildren().clear();
         userMangeBo.getAll().forEach(MemberDto -> {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/UserRow.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/View/UserRow.fxml"));
                 Parent root = fxmlLoader.load();
                 UserRowFromController controller = fxmlLoader.getController();
                 controller.setData(MemberDto);

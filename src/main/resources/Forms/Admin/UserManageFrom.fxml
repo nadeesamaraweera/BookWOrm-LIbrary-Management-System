@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="781.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.UserManageFromController">
+<AnchorPane prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.UserManageFromController">
    <children>
-      <Text layoutX="61.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="380.0192565917969">
+      <Text layoutX="65.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="380.0192565917969">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -34,45 +34,45 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="62.0" layoutX="145.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="1156.0" />
-      <Text fill="WHITE" layoutX="188.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="62.0" layoutX="72.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="1156.0" />
+      <Text fill="WHITE" layoutX="109.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1146.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <Text fill="WHITE" layoutX="1078.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="838.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+      <Text fill="WHITE" layoutX="720.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="502.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+      <Text fill="WHITE" layoutX="356.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <ScrollPane layoutX="146.0" layoutY="165.0" prefHeight="586.0" prefWidth="1155.0">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="1149.0">
+      <Button layoutX="1108.0" layoutY="39.0" mnemonicParsing="false" onAction="#AddUserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="912.0" layoutY="40.0" mnemonicParsing="false" onAction="#UpdateuserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: BLUE; -fx-background-radius: 20;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="73.0" layoutY="168.0" prefHeight="514.0" prefWidth="1154.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="523.0" prefWidth="1152.0">
                <children>
-                  <VBox fx:id="TableBox" prefHeight="598.0" prefWidth="1146.0" />
+                  <VBox fx:id="TableBox" layoutX="-9.0" layoutY="-2.0" prefHeight="530.0" prefWidth="1156.0" />
                </children>
             </AnchorPane>
-         </content>
+        </content>
       </ScrollPane>
-      <Button layoutX="1188.0" layoutY="39.0" mnemonicParsing="false" onAction="#AddUserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="1014.0" layoutY="40.0" mnemonicParsing="false" onAction="#UpdateuserOnActhion" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: BLUE; -fx-background-radius: 20;" text="UPDATE" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="679.0" prefWidth="1193.0" styleClass="background" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.LoginPageController">
+<AnchorPane prefHeight="679.0" prefWidth="1193.0" styleClass="background" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.LoginPageController" >
    <children>
       <ImageView fitHeight="701.0" fitWidth="1195.0" layoutX="-2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>

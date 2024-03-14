@@ -5,22 +5,34 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="1302.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"   fx:controller="org.bookmanagement.Controller.Table_Row.BookRowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BookRowController">
    <children>
-      <CheckBox fx:id="checkBox" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@../../../../../../../Libary_manage2000/src/main/resources/img/Styles/CheckBox.css" />
-      <Label fx:id="Id" layoutX="75.0" layoutY="15.0" prefHeight="25.0" prefWidth="95.0" text="Label" />
-      <Label fx:id="title" layoutX="231.0" layoutY="14.0" prefHeight="30.0" prefWidth="174.0" text="Label" />
-      <Label fx:id="autor" layoutX="495.0" layoutY="16.0" prefHeight="30.0" prefWidth="99.0" text="Label" />
-      <Label fx:id="avilable" layoutX="736.0" layoutY="17.0" prefHeight="25.0" prefWidth="216.0" text="Label" />
-      <Button layoutX="1064.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
+      <Label fx:id="Id" layoutX="49.0" layoutY="8.0" prefHeight="26.0" prefWidth="50.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="title" layoutX="178.0" layoutY="6.0" prefHeight="30.0" prefWidth="138.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="autor" layoutX="371.0" layoutY="6.0" prefHeight="30.0" prefWidth="219.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="avilable" layoutX="651.0" layoutY="8.0" prefHeight="26.0" prefWidth="142.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="898.0" layoutY="6.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
          <stylesheets>
             <URL value="@../../../img/Styles/View.css" />
             <URL value="@../../../img/Styles/TableRow.css" />
          </stylesheets>
       </Button>
-      <Button layoutX="1156.0" layoutY="13.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../../img/Styles/TableRow.css" />
-      <Button layoutX="1243.0" layoutY="12.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../../img/Styles/TableRow.css" />
+      <Button layoutX="946.0" layoutY="6.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../../img/Styles/TableRow.css" />
+      <Button layoutX="993.0" layoutY="6.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../../img/Styles/TableRow.css" />
+      <CheckBox layoutX="14.0" layoutY="12.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>

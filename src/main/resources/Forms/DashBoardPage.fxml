@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="770.0" prefWidth="1293.0" styleClass="background" stylesheets="@../img/Styles/DashBoardPage.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.DashBoardPageFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.DashBoardPageFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="793.0" layoutX="795.0" layoutY="1.0" strokeType="INSIDE" width="498.0">
+      <ImageView fitHeight="529.0" fitWidth="262.0" layoutX="42.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/box.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="111.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Read Book  " wrappingWidth="172.81410217285156">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.8842105269432068" green="0.7677894830703735" blue="0.10807017236948013" />
+                        <Color red="0.35789474844932556" green="0.28167641162872314" blue="0.05302144214510918" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3149394347240915">
+                     <color>
+                        <Color red="0.35789474844932556" green="0.28167641162872314" blue="0.05302144214510918" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4611660046613925">
+                     <color>
+                        <Color red="0.3499999940395355" green="0.2706666588783264" blue="0.05249999836087227" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -27,53 +49,92 @@
                </stops>
             </LinearGradient>
          </fill>
-         <stroke>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.04390243902439025">
-                     <color>
-                        <Color red="0.8105263113975525" green="0.6521734595298767" blue="0.17711500823497772" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </stroke>
-      </Rectangle>
-      <Text layoutX="824.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Profile">
+      </Text>
+      <ImageView fitHeight="770.0" fitWidth="493.0" layoutX="823.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/profilepane.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="UsernameText" layoutX="917.0" layoutY="465.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="917.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="emailText" layoutX="917.0" layoutY="361.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="918.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="PasswordFild" layoutX="921.0" layoutY="561.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="PasswordTextFild" layoutX="920.0" layoutY="561.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="921.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="viewPass" layoutX="1217.0" layoutY="568.0" mnemonicParsing="false" onAction="#viewPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../img/Styles/LoginPage.css" />
+      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="1216.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user.png" />
+         </image>
+      </ImageView>
+      <Text fill="#461904" layoutX="880.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Profile">
+         <font>
+            <Font name="Microsoft Uighur" size="54.0" />
+         </font>
+      </Text>
+      <Button layoutX="1012.0" layoutY="642.0" mnemonicParsing="false" onAction="#ChangePasswordOnActhion" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: brown; -fx-background-radius: 5;" text="Change Setting" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="180.0" fitWidth="252.0" layoutX="982.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/profile%20photo.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="bookCount" fill="#7b0a0a" layoutX="140.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="228.81410217285156">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="595.0" fitWidth="816.0" layoutX="149.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/lovepik-online-educational-books-png-image_400326465_wh1200-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="138.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Count" wrappingWidth="172.81410217285156">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.46315789222717285" green="0.34788304567337036" blue="0.030877193436026573" />
+                        <Color red="0.35789474844932556" green="0.28167641162872314" blue="0.05302144214510918" />
                      </color>
                   </Stop>
-                  <Stop offset="0.04390243902439025">
+                  <Stop offset="0.3149394347240915">
                      <color>
-                        <Color red="0.16842105984687805" green="0.12483950704336166" blue="0.00499025359749794" />
+                        <Color red="0.35789474844932556" green="0.28167641162872314" blue="0.05302144214510918" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4611660046613925">
+                     <color>
+                        <Color red="0.3499999940395355" green="0.2706666588783264" blue="0.05249999836087227" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.8421052694320679" green="0.537231981754303" blue="0.046783626079559326" />
+                        <Color red="1.0" green="1.0" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </fill>
-         <font>
-            <Font name="System Bold" size="39.0" />
-         </font>
       </Text>
    </children>
 </AnchorPane>

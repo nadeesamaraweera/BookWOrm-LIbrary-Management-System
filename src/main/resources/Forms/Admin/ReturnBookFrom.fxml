@@ -12,8 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="736.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ReturnBookFromController">
+<AnchorPane prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ReturnBookFromController">
    <children>
       <Text layoutX="33.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Book" wrappingWidth="380.0192565917969">
          <fill>
@@ -66,7 +65,7 @@
       <TextField fx:id="Payment" layoutX="92.0" layoutY="453.0" prefHeight="39.0" prefWidth="371.0" />
       <TextField fx:id="BookCount" layoutX="591.0" layoutY="301.0" prefHeight="39.0" prefWidth="371.0" />
       <TextField fx:id="Date" layoutX="587.0" layoutY="155.0" prefHeight="39.0" prefWidth="371.0" />
-      <ImageView fitHeight="338.0" fitWidth="537.0" layoutX="579.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="587.0" fitWidth="603.0" layoutX="677.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
          </image>

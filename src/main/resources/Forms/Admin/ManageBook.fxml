@@ -41,22 +41,22 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="67.0" layoutX="20.0" layoutY="146.0" stroke="BLACK" strokeType="INSIDE" width="1038.0" />
-      <Text fill="WHITE" layoutX="98.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+      <Text fill="WHITE" layoutX="60.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="673.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
+      <Text fill="WHITE" layoutX="641.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="465.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+      <Text fill="WHITE" layoutX="413.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="262.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+      <Text fill="WHITE" layoutX="212.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -67,7 +67,7 @@
          </font>
       </Button>
       <TextField fx:id="search" layoutX="62.0" layoutY="73.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="285.0" promptText="Search Here" />
-      <CheckBox fx:id="CheckBox" layoutX="69.0" layoutY="169.0" mnemonicParsing="false" prefWidth="17.0" />
+      <CheckBox fx:id="CheckBox" layoutX="31.0" layoutY="169.0" mnemonicParsing="false" prefWidth="17.0" />
       <Text fill="WHITE" layoutX="939.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
          <font>
             <Font name="System Bold" size="21.0" />
@@ -77,7 +77,7 @@
          <content>
             <AnchorPane prefHeight="408.0" prefWidth="1046.0">
                <children>
-                  <VBox fx:id="tableLoad" layoutX="-4.0" layoutY="41.0" prefHeight="440.0" prefWidth="1044.0" />
+                  <VBox fx:id="tableLoad" layoutX="-4.0" layoutY="3.0" prefHeight="440.0" prefWidth="1044.0" />
                </children>
             </AnchorPane>
          </content>
