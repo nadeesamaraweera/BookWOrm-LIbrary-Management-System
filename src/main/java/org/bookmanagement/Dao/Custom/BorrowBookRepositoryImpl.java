@@ -31,9 +31,9 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
 
     @Override
     public ArrayList<BorrowBook> getAll() {
-        String sql = "SELECT B FROM BorrowBook As B where B.member = :Member";
+        String sql = "SELECT B FROM BorrowBook As B where B.user = :User";
         Query query = session.createQuery(sql);
-        query.setParameter("Member", MemberServiceImpl.member);
+        query.setParameter("User", MemberServiceImpl.member);
         return (ArrayList<BorrowBook>) query.getResultList();
     }
 
@@ -62,10 +62,18 @@ public class BorrowBookRepositoryImpl implements BorrowBookRepository {
 
     @Override
     public BorrowBook getData(User Id) {
-        String sql = "SELECT B FROM BorrowBook As B where B.member = :id and B.status = :status";
+        String sql = "SELECT B FROM BorrowBook As B where B.user = :id and B.status = :status";
         Query query = session.createQuery(sql);
         query.setParameter("id", Id);
         query.setParameter("status", "Pending");
         return (BorrowBook) query.uniqueResult();
+    }
+
+    @Override
+    public int BookCount(User data) {
+        String sql = "SELECT COUNT(B) FROM BorrowBook As B where B.user = :User";
+        Query query = session.createQuery(sql);
+        query.setParameter("User", data);
+        return ((Long) query.uniqueResult()).intValue();
     }
 }

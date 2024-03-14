@@ -58,7 +58,7 @@ public class LoginPageController implements Initializable {
 
     public void LoginOnActhion(ActionEvent actionEvent) {
         if (UserCheckBox.isSelected()){
-            Member_login();
+            User_login();
         } else if (AdminCheckBox.isSelected()) {
             Admin_Login();
         }
@@ -80,7 +80,7 @@ public class LoginPageController implements Initializable {
 
     public static String memberUsername = "";
 
-    void Member_login(){
+    void User_login(){
         boolean logined = memberService.Login(Username.getText(), PasswordFild.getText());
 
         if (logined){

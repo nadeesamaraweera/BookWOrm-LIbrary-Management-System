@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.DashBoardPageFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.DashBoardPageFormController">
    <children>
       <ImageView fitHeight="529.0" fitWidth="262.0" layoutX="42.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -50,32 +50,32 @@
             </LinearGradient>
          </fill>
       </Text>
-      <ImageView fitHeight="770.0" fitWidth="493.0" layoutX="823.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="758.0" fitWidth="447.0" layoutX="835.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/profilepane.png" />
          </image>
       </ImageView>
-      <TextField fx:id="UsernameText" layoutX="917.0" layoutY="465.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
-      <Text fill="#664509db" layoutX="917.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+      <TextField fx:id="UsernameText" layoutX="898.0" layoutY="462.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="898.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="emailText" layoutX="917.0" layoutY="361.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
-      <Text fill="#664509db" layoutX="918.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+      <TextField fx:id="emailText" layoutX="896.0" layoutY="367.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="897.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <PasswordField fx:id="PasswordFild" layoutX="921.0" layoutY="561.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="PasswordTextFild" layoutX="920.0" layoutY="561.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
-      <Text fill="#664509db" layoutX="921.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <PasswordField fx:id="PasswordFild" layoutX="901.0" layoutY="558.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="PasswordTextFild" layoutX="900.0" layoutY="558.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-radius: 5;" />
+      <Text fill="#664509db" layoutX="901.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="viewPass" layoutX="1217.0" layoutY="568.0" mnemonicParsing="false" onAction="#viewPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../img/Styles/LoginPage.css" />
-      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="1216.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="viewPass" layoutX="1168.0" layoutY="565.0" mnemonicParsing="false" onAction="#viewPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../img/Styles/LoginPage.css" />
+      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="1166.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/user.png" />
          </image>
@@ -85,10 +85,13 @@
             <Font name="Microsoft Uighur" size="54.0" />
          </font>
       </Text>
-      <Button layoutX="1012.0" layoutY="642.0" mnemonicParsing="false" onAction="#ChangePasswordOnActhion" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: brown; -fx-background-radius: 5;" text="Change Setting" textFill="WHITE">
+      <Button layoutX="951.0" layoutY="642.0" maxHeight="43.0" maxWidth="178.0" minHeight="27.0" minWidth="215.0" mnemonicParsing="false" onAction="#ChangePasswordOnActhion" prefHeight="43.0" prefWidth="178.0" styleClass="ChangePass" stylesheets="@../img/Styles/DashBoardPage.css" text="Change Setting" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <graphic>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password" wrappingWidth="175.77440929412842" />
+         </graphic>
       </Button>
       <ImageView fitHeight="180.0" fitWidth="252.0" layoutX="982.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
@@ -12,6 +13,7 @@ import org.controlsfx.control.textfield.TextFields;
 import org.bookmanagement.Bo.BorrowBookService;
 import org.bookmanagement.Bo.Custom.MemberServiceImpl;
 import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Controller.Table_Row.BookRowController;
 import org.bookmanagement.Controller.Table_Row.BorrowBookRowController;
 
 import java.time.LocalDate;
@@ -52,7 +54,7 @@ public class BorrowBookPageFormController {
 
 
     public void initialize() {
-        memberIdText.setText("M0"+MemberServiceImpl.member.getId());
+        memberIdText.setText("UI"+MemberServiceImpl.member.getId());
         Autotitle = TextFields.bindAutoCompletion(SearchBook, titleSet);
         LocalDate localDate = LocalDate.now();
         Date.setText(localDate.toString());

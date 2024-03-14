@@ -24,7 +24,7 @@
     -fx-min-width: 100.004px;
     -fx-min-height: 52px;
     -fx-text-fill: #000;
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
     -fx-padding: 20px 20px 0px 20px;
     -fx-background-color: #fff;
     -fx-border-width: 0px 0px 2px 0px;
@@ -32,10 +32,10 @@
 }
 
 .text-area{
-    -fx-min-width: 100px;
-    -fx-max-width: 100px;
-    -fx-min-height: 100px;
-    -fx-max-height: 100px;
+    -fx-min-width: 1000px;
+    -fx-max-width: 1000px;
+    -fx-min-height: 200px;
+    -fx-max-height: 200px;
     -fx-border-color: #A6A6A6;
     -fx-border-width: 2px;
     -fx-border-radius: 8px;

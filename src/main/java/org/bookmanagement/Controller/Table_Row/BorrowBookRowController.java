@@ -26,7 +26,7 @@ public class BorrowBookRowController {
         Id.setText("B0"+data.getId());
     }
 
-    public void deleteBtnOnActhion(ActionEvent actionEvent) {
+    public void DeleteBtnOnActhion(ActionEvent actionEvent) {
         BorrowBookPageFormController.borrowBookPageFormController.borrowRows.remove(Title.getText());
         BorrowBookPageFormController.borrowBookPageFormController.LoadTable();
     }

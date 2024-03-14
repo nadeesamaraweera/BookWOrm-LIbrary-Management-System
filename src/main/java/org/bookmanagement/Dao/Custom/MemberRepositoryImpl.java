@@ -13,9 +13,9 @@ public class MemberRepositoryImpl implements MemberRepository {
     private Session session;;
 
     @Override
-    public User getData (String Id ) {
+    public User getData ( String Id ) {
         String hql = "FROM User WHERE username = :username";
-        Query<User> query = session.createQuery(hql, User.class);
+        Query<User> query = session.createQuery(hql,User.class);
         query.setParameter("username", Id);
         return query.uniqueResult();
     }
@@ -46,13 +46,13 @@ public class MemberRepositoryImpl implements MemberRepository {
 
     @Override
     public void Delete(int Id) {
-        User member = session.get(User.class, Id);
-        session.delete(member);
+        User user = session.get(User.class, Id);
+        session.delete(user);
     }
 
     @Override
     public long Count() {
-        String sql = "select count(*) from User";
+        String sql = "select count(*) from User ";
         org.hibernate.Query query = session.createQuery(sql);
         return (long) query.uniqueResult();
     }
@@ -61,4 +61,13 @@ public class MemberRepositoryImpl implements MemberRepository {
     public void SetSession(Session session) {
         this.session = session;
     }
+
+//    @Override
+//    public Member CheckEmail(String email) {
+//        String hql = "FROM Member WHERE email = :email";
+//        Query<Member> query = session.createQuery(hql, Member.class);
+//        query.setParameter("email", email);
+//        return query.uniqueResult();
+//    }
 }
+

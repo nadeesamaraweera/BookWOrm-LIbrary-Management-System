@@ -6,35 +6,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="43.0" prefWidth="1027.0" styleClass="back" stylesheets="@../../img/Styles/TableRow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BranchRowController">
+<AnchorPane prefHeight="43.0" prefWidth="1166.0" styleClass="back" stylesheets="@../../img/Styles/TableRow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BranchRowController">
    <children>
-      <Label fx:id="Id" layoutX="18.0" layoutY="7.0" prefHeight="26.0" prefWidth="50.0" text="Label">
+      <Label fx:id="Id" layoutX="29.0" layoutY="7.0" prefHeight="26.0" prefWidth="50.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="name" layoutX="173.0" layoutY="5.0" prefHeight="30.0" prefWidth="138.0" text="Label">
+      <Label fx:id="name" layoutX="231.0" layoutY="5.0" prefHeight="30.0" prefWidth="183.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="locathion" layoutX="366.0" layoutY="5.0" prefHeight="30.0" prefWidth="219.0" text="Label">
+      <Label fx:id="locathion" layoutX="507.0" layoutY="5.0" prefHeight="30.0" prefWidth="219.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="email" layoutX="646.0" layoutY="6.0" prefHeight="26.0" prefWidth="142.0" text="Label">
+      <Label fx:id="email" layoutX="746.0" layoutY="6.0" prefHeight="30.0" prefWidth="304.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="893.0" layoutY="5.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
+      <Button layoutX="1047.0" layoutY="5.0" mnemonicParsing="false" onAction="#viewBtnOnActhion" styleClass="view-btn">
          <stylesheets>
             <URL value="@../../img/Styles/View.css" />
             <URL value="@../../img/Styles/TableRow.css" />
          </stylesheets>
       </Button>
-      <Button layoutX="941.0" layoutY="5.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../img/Styles/TableRow.css" />
-      <Button layoutX="988.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../img/Styles/TableRow.css" />
+      <Button layoutX="1089.0" layoutY="5.0" mnemonicParsing="false" onAction="#editBtnOnActhion" styleClass="edit-btn" stylesheets="@../../img/Styles/TableRow.css" />
+      <Button layoutX="1129.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteBtnOnActhion" styleClass="delete_btn" stylesheets="@../../img/Styles/TableRow.css" />
    </children>
 </AnchorPane>

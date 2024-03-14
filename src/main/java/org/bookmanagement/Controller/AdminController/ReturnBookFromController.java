@@ -38,7 +38,7 @@ public class ReturnBookFromController {
         List<Integer> allId = returnBookServiceI.getAllId();
         ObservableList<String> items = FXCollections.observableArrayList();
         for (Integer integer : allId) {
-            items.add("M0"+integer);
+            items.add("UI"+integer);
         }
         MemberIdCombo.setItems(items);
     }

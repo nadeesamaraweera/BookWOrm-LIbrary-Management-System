@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1246.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.BookViewFormController">
    <children>
       <TextField fx:id="searchBar" layoutX="46.0" layoutY="31.0" minWidth="389.0" onAction="#searchOnActhion" prefHeight="51.0" prefWidth="450.0" promptText="Search Here" styleClass="search" stylesheets="@../img/Styles/ViewBookPage.css">
@@ -22,7 +21,7 @@
             <Image url="@../img/Searchicon.png" />
          </image>
       </ImageView>
-      <TextField fx:id="titleText" layoutX="106.0" layoutY="176.0" minWidth="310.0" prefHeight="52.0" prefWidth="310.0" styleClass="text-field1" stylesheets="@../../../../../Libary_manage20/src/main/resources/img/Styles/ViewBookPage.css" />
+      <TextField fx:id="titleText" blendMode="MULTIPLY" layoutX="106.0" layoutY="176.0" minWidth="310.0" prefHeight="52.0" prefWidth="344.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
       <Text fill="#3b1a04db" layoutX="106.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="153.0643768310547">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -33,28 +32,28 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="AutorText" layoutX="659.0" layoutY="174.0" minWidth="393.0" prefHeight="52.0" prefWidth="393.0" styleClass="text-field1" stylesheets="@../../../../../Libary_manage20/src/main/resources/img/Styles/ViewBookPage.css" />
+      <TextField fx:id="AutorText" blendMode="MULTIPLY" layoutX="659.0" layoutY="176.0" minWidth="393.0" prefHeight="52.0" prefWidth="393.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
       <Text fill="#3b1a04db" layoutX="112.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="96.53105163574219">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="genreText" layoutX="107.0" layoutY="602.0" prefHeight="39.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../../../../Libary_manage20/src/main/resources/img/Styles/ViewBookPage.css" />
+      <TextField fx:id="genreText" blendMode="MULTIPLY" layoutX="107.0" layoutY="603.0" prefHeight="39.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../img/Styles/ViewBookPage.css" />
       <Text fill="#3b1a04db" layoutX="108.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="153.0643768310547">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#3b1a04db" layoutX="649.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility" wrappingWidth="96.53105163574219">
+      <Text fill="#3b1a04db" layoutX="670.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility" wrappingWidth="96.53105163574219">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="654.0" layoutY="633.0" prefHeight="26.0" prefWidth="131.0" styleClass="label1" stylesheets="@../../../../../Libary_manage20/src/main/resources/img/Styles/ViewBookPage.css">
+      <Label fx:id="lable" layoutX="654.0" layoutY="609.0" prefHeight="26.0" prefWidth="131.0" styleClass="label1" stylesheets="@../../../../../Libary_manage20/src/main/resources/img/Styles/ViewBookPage.css">
          <graphic>
             <Text fx:id="lableText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lableText" text="Text" />
          </graphic>
       </Label>
-      <TextArea layoutX="105.0" layoutY="293.0" minWidth="991.0" prefHeight="263.0" prefWidth="991.0" />
+      <TextArea fx:id="DisText" blendMode="MULTIPLY" layoutX="104.0" layoutY="298.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" stylesheets="@../img/Styles/ViewBookPage.css" />
    </children>
 </AnchorPane>

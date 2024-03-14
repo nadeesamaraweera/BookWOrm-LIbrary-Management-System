@@ -128,13 +128,15 @@
 }
 
 .ChangePass{
-    -fx-min-width: 253px;
-    -fx-max-width: 253px;
-    -fx-min-height: 53px;
-    -fx-max-height: 53px;
-    -fx-background-color: #FFF48F;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-background-color: #d57a1c;
     -fx-background-radius: 8px;
     -fx-font-size: 18px;
     -fx-font-weight: 400;
-    -fx-text-fill: #000;
+    -fx-text-fill:#FFF;
+
+
 }

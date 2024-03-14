@@ -38,7 +38,7 @@ public class BorrowBook{
 
     @ManyToOne
     @JoinColumn(name = "member_id")
-    private User member;
+    private User user;
 
     @Column(name = "Payment")
     private double payment;

@@ -32,7 +32,7 @@ public class UpdateBranchFormController {
     BranchService branchService = (BranchService) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Branch);
 
     @FXML
-    void UpdateBtnOnActhion(ActionEvent event) {
+    void updateBtnOnActhion(ActionEvent event) {
         if (Validation.isValidName(name.getText()) && Validation.isValidAddress(locationtext.getText()) && Validation.isValidEmail(email.getText())){
             branchService.update(new BranchDto(branchDto.getId(), name.getText(), locationtext.getText(), email.getText()));
             new Alert(Alert.AlertType.CONFIRMATION, "Updated", ButtonType.OK).show();

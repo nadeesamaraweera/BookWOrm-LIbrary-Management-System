@@ -65,7 +65,7 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <TextField fx:id="search" layoutX="51.0" layoutY="121.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="292.0" promptText="Search Here" />
+      <TextField fx:id="search" blendMode="MULTIPLY" layoutX="51.0" layoutY="123.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="292.0" promptText="Search Here" styleClass="label" stylesheets="@../../img/Styles/View.css" />
       <CheckBox fx:id="CheckBox" layoutX="24.0" layoutY="216.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" stylesheets="@../../img/Styles/CheckBox.css" />
       <Text fill="WHITE" layoutX="939.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
          <font>
@@ -85,12 +85,17 @@
       <Line endX="168.60000610351562" endY="0.20000457763671875" layoutX="175.0" layoutY="166.0" startX="-141.39999389648438" startY="-7.62939453125E-6" />
       <ScrollPane layoutX="21.0" layoutY="258.0" prefHeight="443.0" prefWidth="1037.0">
          <content>
-            <AnchorPane prefHeight="440.0" prefWidth="1035.0">
+            <AnchorPane blendMode="DARKEN" prefHeight="440.0" prefWidth="1035.0">
                <children>
                   <VBox fx:id="tableLoad" prefHeight="440.0" prefWidth="1034.0" style="-fx-background-color: #fff;" />
                </children>
             </AnchorPane>
          </content>
       </ScrollPane>
+      <ImageView blendMode="MULTIPLY" fitHeight="367.0" fitWidth="410.0" layoutX="892.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package org.bookmanagement.Entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -7,12 +8,12 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "Member")
+@Table(name = "user")
 @Data
 @NoArgsConstructor
-@ToString
 public class User {
 
     @Id
@@ -32,14 +33,13 @@ public class User {
     @Column(name = "Email")
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "member")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<BorrowBook> transactions = new ArrayList<>();
 
-    public User(int Id, String full_name, String username, String password, String email) {
+    public User(int Id,String full_name, String username, String password, String email) {
         this.full_name = full_name;
         this.username = username;
         this.password = password;
         this.email = email;
     }
 }
-

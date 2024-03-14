@@ -7,6 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import org.bookmanagement.Controller.LoginPageController;
 import org.bookmanagement.Bo.MemberDashboardServer;
 import org.bookmanagement.Bo.ServiceFactor;
 import org.bookmanagement.Dto.MemberDto;
@@ -19,6 +21,7 @@ public class DashBoardPageFormController implements Initializable {
 
     public TextField emailText;
     public TextField UsernameText;
+    public Text bookCount;
     @FXML
     private PasswordField PasswordFild;
 
@@ -30,7 +33,7 @@ public class DashBoardPageFormController implements Initializable {
 
     Boolean flag = false;
 
-    private final MemberDashboardServer memberDashboardServer = (MemberDashboardServer) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.MemberDashBoard);
+    private final MemberDashboardServer memberDashboardServer = (MemberDashboardServer) org.bookmanagement.Bo.ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.MemberDashBoard);
 
     @FXML
     void viewPassOnActhion(ActionEvent event) {
@@ -55,6 +58,7 @@ public class DashBoardPageFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         PasswordTextFild.setVisible(false);
         SetData();
+        getBookCount();
     }
 
     int Id = 0;
@@ -96,5 +100,10 @@ public class DashBoardPageFormController implements Initializable {
         else {
             new Alert(Alert.AlertType.INFORMATION,"Please Enter Valid Data").show();
         }
+    }
+
+    void getBookCount(){
+        int count = memberDashboardServer.BookCount(LoginPageController.memberUsername);
+        bookCount.setText(String.valueOf(count));
     }
 }

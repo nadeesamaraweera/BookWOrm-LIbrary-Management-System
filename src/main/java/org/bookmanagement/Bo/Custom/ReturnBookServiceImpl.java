@@ -69,7 +69,7 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
     public BorrowBook getPendingData(String value) {
 
         session = SessionFactoryConfiguration.getInstance().getSession();
-        int m = GetIdNumber.getIdNumber("M", value);
+        int m = GetIdNumber.getIdNumber("U", value);
         memberRepository.SetSession(session);
         User data1 = memberRepository.getData(""+m);
 
