@@ -63,8 +63,8 @@
          </font>
       </Text>
       <TextField fx:id="Payment" blendMode="MULTIPLY" layoutX="91.0" layoutY="450.0" prefHeight="49.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="BookCount" blendMode="MULTIPLY" layoutX="591.0" layoutY="297.0" prefHeight="46.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
       <TextField fx:id="Date" blendMode="MULTIPLY" layoutX="586.0" layoutY="155.0" prefHeight="39.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
+      <TextField fx:id="BookCount" blendMode="MULTIPLY" layoutX="591.0" layoutY="297.0" prefHeight="46.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
       <ImageView fitHeight="334.0" fitWidth="533.0" layoutX="677.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
