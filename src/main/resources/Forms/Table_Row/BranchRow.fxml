@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="43.0" prefWidth="1166.0" styleClass="back" stylesheets="@../../img/Styles/TableRow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.Table_Row.BranchRowController">
    <children>
-      <Label fx:id="Id" layoutX="29.0" layoutY="7.0" prefHeight="26.0" prefWidth="50.0" text="Label">
+      <Label fx:id="Id" layoutX="34.0" layoutY="7.0" prefHeight="26.0" prefWidth="50.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
@@ -23,7 +23,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="email" layoutX="746.0" layoutY="6.0" prefHeight="30.0" prefWidth="304.0" text="Label">
+      <Label fx:id="email" layoutX="753.0" layoutY="6.0" prefHeight="30.0" prefWidth="304.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>

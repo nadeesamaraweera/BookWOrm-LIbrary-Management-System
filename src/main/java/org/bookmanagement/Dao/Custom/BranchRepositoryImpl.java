@@ -23,8 +23,8 @@ public class BranchRepositoryImpl implements BranchRepository {
 
     @Override
     public int saved(Branch data) {
-         int value = (int) session.save(data);
-            return value;
+        int value = (int) session.save(data);
+        return value;
     }
 
     @Override

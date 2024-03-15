@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-import org.bookmanagement.Bo.BranchService;
+import org.bookmanagement.Bo.ManageBookService;
 import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Bo.BranchService;
+import org.bookmanagement.Dto.BookDto;
 import org.bookmanagement.Dto.BranchDto;
 import org.bookmanagement.util.Validation;
 
@@ -33,13 +35,12 @@ public class UpdateBranchFormController {
 
     @FXML
     void updateBtnOnActhion(ActionEvent event) {
-        if (Validation.isValidName(name.getText()) && Validation.isValidAddress(locationtext.getText()) && Validation.isValidEmail(email.getText())){
+        if (Validation.isValidName(name.getText()) && Validation.isValidAddress(locationtext.getText()) && Validation.isValidEmail(email.getText())) {
             branchService.update(new BranchDto(branchDto.getId(), name.getText(), locationtext.getText(), email.getText()));
-            new Alert(Alert.AlertType.CONFIRMATION, "Updated", ButtonType.OK).show();
+            new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
 
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Invalid Input").show();
         }
-        else {
-            new Alert(Alert.AlertType.ERROR, "Invalid Input", ButtonType.OK).show();
-        }
-    }
-}
+
+    }}
