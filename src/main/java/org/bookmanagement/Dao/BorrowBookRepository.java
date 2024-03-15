@@ -9,4 +9,6 @@ public interface BorrowBookRepository extends CrudUtil<BorrowBook>{
 
 
     int BookCount(User data);
+
+    BorrowBook getPendingBook(User id) ;
 }

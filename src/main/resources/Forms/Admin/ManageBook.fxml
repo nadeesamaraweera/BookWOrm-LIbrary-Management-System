@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ManageBookFormController">
+<AnchorPane prefHeight="650.0" prefWidth="1129.0" style="-fx-background-color: F5D684; -fx-background-radius: 50;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.ManageBookFormController">
    <children>
-      <Text layoutX="19.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Management" wrappingWidth="380.0192565917969">
+      <Text layoutX="33.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Management" wrappingWidth="380.0192565917969">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -39,63 +39,58 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="54.0" layoutX="20.0" layoutY="205.0" stroke="BLACK" strokeType="INSIDE" width="1038.0" />
-      <Text fill="WHITE" layoutX="66.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1a812" height="54.0" layoutX="35.0" layoutY="111.0" stroke="#d9d7d7" strokeType="INSIDE" width="1033.0" />
+      <Text fill="WHITE" layoutX="81.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="641.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
+      <Text fill="WHITE" layoutX="656.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avalibility">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="413.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+      <Text fill="WHITE" layoutX="428.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="212.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+      <Text fill="WHITE" layoutX="227.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="917.0" layoutY="139.0" mnemonicParsing="false" onAction="#AddBtnOnActhion" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="   ADD" textFill="WHITE">
+      <Button layoutX="39.0" layoutY="540.0" mnemonicParsing="false" onAction="#AddBtnOnActhion" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: Green; -fx-background-radius: 20;" text="   ADD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <TextField fx:id="search" blendMode="MULTIPLY" layoutX="51.0" layoutY="123.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="292.0" promptText="Search Here" styleClass="label" stylesheets="@../../img/Styles/View.css" />
-      <CheckBox fx:id="CheckBox" layoutX="24.0" layoutY="216.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" stylesheets="@../../img/Styles/CheckBox.css" />
-      <Text fill="WHITE" layoutX="939.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+      <TextField fx:id="search" blendMode="MULTIPLY" layoutX="800.0" layoutY="4.0" onAction="#searchOnActhion" prefHeight="43.0" prefWidth="292.0" promptText="Search Here" styleClass="label" stylesheets="@../../img/Styles/View.css" />
+      <CheckBox fx:id="CheckBox" layoutX="39.0" layoutY="122.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" stylesheets="@../../img/Styles/CheckBox.css" />
+      <Text fill="WHITE" layoutX="954.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <ImageView fitHeight="62.0" fitWidth="35.0" layoutX="927.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="62.0" fitWidth="35.0" layoutX="48.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/add.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="68.0" fitWidth="35.0" layoutX="20.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="68.0" fitWidth="35.0" layoutX="768.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/Search.png" />
          </image>
       </ImageView>
-      <Line endX="168.60000610351562" endY="0.20000457763671875" layoutX="175.0" layoutY="166.0" startX="-141.39999389648438" startY="-7.62939453125E-6" />
-      <ScrollPane layoutX="21.0" layoutY="258.0" prefHeight="443.0" prefWidth="1037.0">
+      <Line endX="168.60000610351562" endY="0.20000457763671875" layoutX="923.0" layoutY="49.0" startX="-141.39999389648438" startY="-7.62939453125E-6" />
+      <ScrollPane layoutX="36.0" layoutY="165.0" prefHeight="348.0" prefWidth="1034.0">
          <content>
-            <AnchorPane blendMode="DARKEN" prefHeight="440.0" prefWidth="1035.0">
+            <AnchorPane blendMode="DARKEN" prefHeight="350.0" prefWidth="1029.0">
                <children>
-                  <VBox fx:id="tableLoad" prefHeight="440.0" prefWidth="1034.0" style="-fx-background-color: #fff;" />
+                  <VBox fx:id="tableLoad" layoutX="1.0" layoutY="-9.0" prefHeight="351.0" prefWidth="1036.0" style="-fx-background-color: #fff;" />
                </children>
             </AnchorPane>
          </content>
       </ScrollPane>
-      <ImageView blendMode="MULTIPLY" fitHeight="367.0" fitWidth="410.0" layoutX="892.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../img/0_zxSz_YsAbgDnEKxB-removebg-preview.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

@@ -5,11 +5,13 @@ import org.bookmanagement.Dao.BookRepository;
 import org.bookmanagement.Dao.BookTransactionRepository;
 import org.bookmanagement.Dao.BorrowBookRepository;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
+import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.BookDto;
 import org.bookmanagement.Entity.Book_Transaction;
 import org.bookmanagement.Entity.Books;
 import org.bookmanagement.Entity.BorrowBook;
 import org.bookmanagement.Entity.User;
+import org.bookmanagement.util.GetIdNumber;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -26,6 +28,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     private final BookRepository bookRepository = (BookRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Books);
     private final BorrowBookRepository borrowBookRepository = (BorrowBookRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.BorrowBook);
     private final BookTransactionRepository transactionRepository = (BookTransactionRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Book_Transaction);
+    private final MemberRepository memberRepository = (MemberRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Member);
 
     @Override
     public List<String> getTitles() {
@@ -66,7 +69,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
                     -1,
                     data.size(),
                     date,
-                    "No",
+                    "Pending",
                     null,
                     member,
                     0,
@@ -77,7 +80,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
             int saved = borrowBookRepository.saved(borrowBook);
 
             for (Books book : books) {
-                book.setAvailable("Pending");
+                book.setAvailable("No");
                 bookRepository.SetSession(session);
                 bookRepository.Update(book);
 
@@ -101,6 +104,25 @@ public class BorrowBookServiceImpl implements BorrowBookService {
         } finally {
             session.close();
         }
+    }
 
+    @Override
+    public boolean getPendingBook(String id){
+        int memberId = GetIdNumber.getIdNumber("M", id);
+        session = SessionFactoryConfiguration.getInstance().getSession();
+
+        memberRepository.SetSession(session);
+        User member = memberRepository.getData(""+memberId);
+
+        borrowBookRepository.SetSession(session);
+        BorrowBook data = borrowBookRepository.getPendingBook(member);
+        session.close();
+
+        if(data == null){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

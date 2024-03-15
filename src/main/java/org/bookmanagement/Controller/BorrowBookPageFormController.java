@@ -54,7 +54,7 @@ public class BorrowBookPageFormController {
 
 
     public void initialize() {
-        memberIdText.setText("UI"+MemberServiceImpl.member.getId());
+        memberIdText.setText("M0"+MemberServiceImpl.member.getId());
         Autotitle = TextFields.bindAutoCompletion(SearchBook, titleSet);
         LocalDate localDate = LocalDate.now();
         Date.setText(localDate.toString());
@@ -109,21 +109,35 @@ public class BorrowBookPageFormController {
     }
 
     void saveData(){
-        boolean saveTransaction = borrowBookService.saveTransaction(titles);
-        if (saveTransaction){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Success");
-            alert.setHeaderText("Transaction Success");
-            alert.setContentText("Transaction has been saved successfully");
-            alert.showAndWait();
-        }
-        else {
+        if (!getPendingBook()){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Transaction Failed");
-            alert.setContentText("Transaction has been failed");
+            alert.setHeaderText("Pending Book");
+            alert.setContentText("You have already pending book");
             alert.showAndWait();
+            return;
         }
+        else {
+            boolean saveTransaction = borrowBookService.saveTransaction(titles);
+            if (saveTransaction){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Success");
+                alert.setHeaderText("Transaction Success");
+                alert.setContentText("Transaction has been saved successfully");
+                alert.showAndWait();
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Transaction Failed");
+                alert.setContentText("Transaction has been failed");
+                alert.showAndWait();
+            }
+        }
+    }
+
+    boolean getPendingBook(){
+        return borrowBookService.getPendingBook(memberIdText.getText());
     }
 
 }

@@ -11,11 +11,10 @@ public class ViewBookFormController {
     public Label genre;
 
     public void setData(BookDto bookDto){
-        Book_Id.setText("B0"+bookDto.getId());
+        Book_Id.setText("BI"+bookDto.getId());
         available.setText(bookDto.getAvailable());
         title.setText(bookDto.getTitle());
         author.setText(bookDto.getAutor());
         genre.setText(bookDto.getGenre());
-        author.setText(bookDto.getGenre());
     }
 }
