@@ -3,6 +3,7 @@ package org.bookmanagement.Service.Custom;
 import org.bookmanagement.Service.DashboardService;
 import org.bookmanagement.Repository.AdminRepository;
 import org.bookmanagement.Repository.BookRepository;
+import org.bookmanagement.Repository.BorrowBookRepository;
 import org.bookmanagement.Repository.BranchRepository;
 import org.bookmanagement.Repository.Custom.RepositoryFactory;
 import org.bookmanagement.Dto.AdminDto;
@@ -18,6 +19,7 @@ public class DashboardServiceImpl implements DashboardService {
 
     private final BranchRepository branchRepository = (BranchRepository) RepositoryFactory.getDaoFactory().getDao( RepositoryFactory.DaoType.Branch );
 
+    private final BorrowBookRepository borrowBookRepository = (BorrowBookRepository) RepositoryFactory.getDaoFactory().getDao( RepositoryFactory.DaoType.BorrowBook );
     private Session session;
     private Transaction transaction;
     @Override
@@ -33,6 +35,7 @@ public class DashboardServiceImpl implements DashboardService {
         adminRepository.Update(admin);
         transaction = session.beginTransaction();
         transaction.commit();
+        session.close();
     }
 
     @Override
@@ -42,24 +45,40 @@ public class DashboardServiceImpl implements DashboardService {
         adminRepository.Delete(id);
         transaction = session.beginTransaction();
         transaction.commit();
+        session.close();
     }
 
     @Override
     public long BookCount(){
         session = SessionFactoryConfiguration.getInstance().getSession();
         bookRepository.SetSession(session);
-        return bookRepository.Count();
+        long count = bookRepository.Count();
+        session.close();
+        return count;
     }
     @Override
     public long MemberCount(){
         session = SessionFactoryConfiguration.getInstance().getSession();
         adminRepository.SetSession(session);
-        return adminRepository.Count();
+        long count = adminRepository.Count();
+        session.close();
+        return count;
     }
     @Override
     public long BranchCount(){
         session = SessionFactoryConfiguration.getInstance().getSession();
         branchRepository.SetSession(session);
-        return branchRepository.Count();
+        long count = branchRepository.Count();
+        session.close();
+        return count;
+    }
+
+    @Override
+    public long Payment(){
+        session = SessionFactoryConfiguration.getInstance().getSession();
+        borrowBookRepository.SetSession(session);
+        long count = borrowBookRepository.Count();
+        session.close();
+        return count;
     }
 }

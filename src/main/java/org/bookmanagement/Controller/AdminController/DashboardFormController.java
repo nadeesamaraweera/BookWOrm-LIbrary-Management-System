@@ -8,10 +8,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Service.Custom.AdminServiceImpl;
 import org.bookmanagement.Service.DashboardService;
-import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Controller.Table_Row.Update.UpdateUserFormController;
 import org.bookmanagement.Dto.AdminDto;
 
@@ -54,6 +55,7 @@ public class DashboardFormController {
         BookCount.setText(String.valueOf(dashboardService.BookCount()));
         BranchCount.setText(String.valueOf(dashboardService.BranchCount()));
         MemberCount.setText(String.valueOf(dashboardService.MemberCount()));
+        PaymentCount.setText(String.valueOf(dashboardService.Payment()));
     }
 
     @FXML
@@ -87,5 +89,17 @@ public class DashboardFormController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void bellBtnOnActhion(MouseEvent mouseEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Admin/PendingBookForm.fxml"));
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
