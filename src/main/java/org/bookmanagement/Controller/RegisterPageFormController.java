@@ -12,8 +12,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.bookmanagement.Bo.RegisterService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.RegisterService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Dto.MemberDto;
 import org.bookmanagement.util.Validation;
 

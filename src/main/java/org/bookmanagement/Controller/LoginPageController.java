@@ -1,9 +1,9 @@
 package org.bookmanagement.Controller;
 
 import javafx.scene.control.*;
-import org.bookmanagement.Bo.ServiceFactor;
-import org.bookmanagement.Bo.MemberService;
-import org.bookmanagement.Bo.AdminService;
+import org.bookmanagement.Service.ServiceFactor;
+import org.bookmanagement.Service.MemberService;
+import org.bookmanagement.Service.AdminService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

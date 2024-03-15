@@ -7,9 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import org.bookmanagement.Bo.ReturnBookServiceI;
-import org.bookmanagement.Bo.ServiceFactor;
-import org.bookmanagement.Entity.Book_Transaction;
+import org.bookmanagement.Service.ReturnBookServiceI;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Entity.BorrowBook;
 
 import java.time.LocalDate;

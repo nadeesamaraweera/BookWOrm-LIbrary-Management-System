@@ -6,8 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.bookmanagement.Bo.BranchService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.BranchService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Controller.Table_Row.BranchRowController;
 import org.bookmanagement.Dto.BranchDto;
 

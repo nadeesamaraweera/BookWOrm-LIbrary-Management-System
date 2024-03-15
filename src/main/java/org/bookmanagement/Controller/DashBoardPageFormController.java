@@ -8,9 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import org.bookmanagement.Controller.LoginPageController;
-import org.bookmanagement.Bo.MemberDashboardServer;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.MemberDashboardServer;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Dto.MemberDto;
 import org.bookmanagement.util.Validation;
 
@@ -33,7 +32,7 @@ public class DashBoardPageFormController implements Initializable {
 
     Boolean flag = false;
 
-    private final MemberDashboardServer memberDashboardServer = (MemberDashboardServer) org.bookmanagement.Bo.ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.MemberDashBoard);
+    private final MemberDashboardServer memberDashboardServer = (MemberDashboardServer) org.bookmanagement.Service.ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.MemberDashBoard);
 
     @FXML
     void viewPassOnActhion(ActionEvent event) {

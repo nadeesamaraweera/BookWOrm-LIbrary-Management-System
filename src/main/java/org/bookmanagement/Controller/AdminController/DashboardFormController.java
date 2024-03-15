@@ -9,9 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.bookmanagement.Bo.Custom.AdminServiceImpl;
-import org.bookmanagement.Bo.DashboardService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.Custom.AdminServiceImpl;
+import org.bookmanagement.Service.DashboardService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Controller.Table_Row.Update.UpdateUserFormController;
 import org.bookmanagement.Dto.AdminDto;
 

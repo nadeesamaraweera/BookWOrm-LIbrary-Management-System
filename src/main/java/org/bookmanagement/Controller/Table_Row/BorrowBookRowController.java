@@ -2,8 +2,8 @@ package org.bookmanagement.Controller.Table_Row;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
-import org.bookmanagement.Bo.BorrowBookService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.BorrowBookService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Controller.BorrowBookPageFormController;
 import org.bookmanagement.Dto.BookDto;
 

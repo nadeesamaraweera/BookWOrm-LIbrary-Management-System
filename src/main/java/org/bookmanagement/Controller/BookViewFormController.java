@@ -9,8 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
 import org.controlsfx.control.textfield.TextFields;
-import org.bookmanagement.Bo.SearchBookService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.SearchBookService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Dto.BookDto;
 
 import java.net.URL;

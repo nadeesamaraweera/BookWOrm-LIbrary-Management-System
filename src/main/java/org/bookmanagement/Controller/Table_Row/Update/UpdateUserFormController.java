@@ -5,9 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-import org.bookmanagement.Bo.Custom.AdminServiceImpl;
-import org.bookmanagement.Bo.DashboardService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Service.Custom.AdminServiceImpl;
+import org.bookmanagement.Service.DashboardService;
+import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Dto.AdminDto;
 import org.bookmanagement.util.Validation;
 
