@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bookmanagement.Controller.AdminController.UserManageFromController">
    <children>
-      <Text layoutX="51.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="380.0192565917969">
+      <Text layoutX="43.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="380.0192565917969">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
