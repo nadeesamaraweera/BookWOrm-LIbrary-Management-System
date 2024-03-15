@@ -124,7 +124,7 @@ public class AdminRegisterFormController {
 
         if (register != -1){
 
-            new Alert(Alert.AlertType.INFORMATION,"Admin Id is : AD"+register).show();
+            new Alert(Alert.AlertType.INFORMATION,"Admin Id is : M0"+register).show();
 
             Parent parent = null;
 

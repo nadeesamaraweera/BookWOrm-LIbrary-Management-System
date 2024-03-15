@@ -79,10 +79,8 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <PasswordField fx:id="PasswordFild" layoutX="116.0" layoutY="439.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
       <PasswordField fx:id="PasswordConfirm" layoutX="116.0" layoutY="512.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
       <TextField fx:id="PasswordConfirmText" layoutX="116.0" layoutY="512.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="PasswordTextFild" layoutX="115.0" layoutY="439.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;" />
       <Text fill="#664509db" layoutX="116.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -125,13 +123,23 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Button fx:id="viewPass" layoutX="412.0" layoutY="446.0" mnemonicParsing="false" onAction="#viewPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../../img/Styles/LoginPage.css" />
       <Button fx:id="viewConfirmPass" layoutX="415.0" layoutY="517.0" mnemonicParsing="false" onAction="#viewConfirmPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../../img/Styles/LoginPage.css" />
       <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="412.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/user.png" />
          </image>
       </ImageView>
+      <PasswordField fx:id="PasswordFild" layoutX="115.0" layoutY="438.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="PasswordTextFild" layoutX="114.0" layoutY="438.0" prefHeight="38.0" prefWidth="330.0" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="viewPass" layoutX="411.0" layoutY="445.0" mnemonicParsing="false" onAction="#viewPassOnActhion" prefHeight="26.0" prefWidth="27.0" styleClass="eye" stylesheets="@../../img/Styles/LoginPage.css" />
 
    </children>
 </AnchorPane>

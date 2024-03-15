@@ -2,6 +2,7 @@ package org.bookmanagement.Dao.Custom;
 
 import org.bookmanagement.Dao.AdminRepository;
 import org.bookmanagement.Entity.Admin;
+import org.bookmanagement.Entity.User;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
@@ -61,7 +62,9 @@ public class AdminRepositoryImpl implements AdminRepository {
 
     @Override
     public long Count() {
-        return 0;
+        String sqlQuery = "SELECT COUNT(*) FROM Admin";
+        Query query = session.createQuery(sqlQuery);
+        return (long) query.uniqueResult();
     }
 
     @Override
@@ -72,5 +75,13 @@ public class AdminRepositoryImpl implements AdminRepository {
     @Override
     public void SetSession(Session session) {
         this.session = session;
+    }
+
+    @Override
+    public Admin CheckEmail(String email) {
+        String hql = "FROM Admin WHERE Email = :email";
+        Query<Admin> query = session.createQuery(hql, Admin.class);
+        query.setParameter("email", email);
+        return query.uniqueResult();
     }
 }

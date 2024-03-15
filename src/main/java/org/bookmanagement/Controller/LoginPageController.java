@@ -1,17 +1,18 @@
 package org.bookmanagement.Controller;
 
+import javafx.scene.control.*;
+import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Bo.MemberService;
+import org.bookmanagement.Bo.AdminService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.bookmanagement.Bo.AdminService;
-import org.bookmanagement.Bo.MemberService;
-import org.bookmanagement.Bo.ServiceFactor;
+import org.bookmanagement.Controller.ForgetPassWord.ForgetPassWordFormController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,10 +24,12 @@ public class LoginPageController implements Initializable {
     public TextField PasswordTextFild;
     public Button viewPass;
     public TextField Username;
-    public CheckBox UserCheckBox;
+    public CheckBox MemberCheckBox;
     public CheckBox AdminCheckBox;
 
     Boolean flag = false;
+
+    public static Stage stage ;
 
     MemberService memberService = (MemberService) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Member);
     AdminService adminBo = (AdminService) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Admin);
@@ -57,13 +60,15 @@ public class LoginPageController implements Initializable {
     }
 
     public void LoginOnActhion(ActionEvent actionEvent) {
-        if (UserCheckBox.isSelected()){
-            User_login();
+        if (MemberCheckBox.isSelected()){
+            ForgetPassWordFormController.user = "Member";
+            Member_login();
         } else if (AdminCheckBox.isSelected()) {
+            ForgetPassWordFormController.user = "Admin";
             Admin_Login();
         }
         else {
-            new Alert(Alert.AlertType.INFORMATION,"Please select User or Admin").show();
+            new Alert(Alert.AlertType.INFORMATION,"Please select Member or Admin").show();
         }
     }
 
@@ -80,7 +85,7 @@ public class LoginPageController implements Initializable {
 
     public static String memberUsername = "";
 
-    void User_login(){
+    void Member_login(){
         boolean logined = memberService.Login(Username.getText(), PasswordFild.getText());
 
         if (logined){
@@ -96,7 +101,7 @@ public class LoginPageController implements Initializable {
             }
         }
         else {
-            new Alert(Alert.AlertType.INFORMATION,"Wrong Data has been input").show();
+            new Alert(Alert.AlertType.INFORMATION,"Worng Data has been input").show();
         }
     }
 
@@ -121,4 +126,22 @@ public class LoginPageController implements Initializable {
         }
     }
 
+    public void forgetPasswordOnActhion(MouseEvent mouseEvent) {
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("/Forms/FogotPassword.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void memberOnActhion(ActionEvent actionEvent) {
+        ForgetPassWordFormController.user = "User";
+    }
+
+    public void AdminOnActhion(ActionEvent actionEvent) {
+        ForgetPassWordFormController.user = "Admin";
+    }
 }
