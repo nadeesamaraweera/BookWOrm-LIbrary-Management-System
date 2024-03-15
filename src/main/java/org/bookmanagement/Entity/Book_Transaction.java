@@ -1,6 +1,5 @@
 package org.bookmanagement.Entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,19 +12,26 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class Book_Transaction {
     @Id
-    @Column(name = "transaction_id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "transaction_id", insertable = false, updatable = false)
+    @JoinColumn(name = "Borrow_id")
     private BorrowBook transaction;
 
     @ManyToOne
-    @JoinColumn(name = "book_id", insertable = false, updatable = false)
-    private Books book;
+    @JoinColumn(name = "Book_Id")
+    private Book book;
 
+    @Override
+    public String toString() {
+        return "Book_Transaction{" +
+                "id=" + id +
+                ", transaction=" + transaction +
+                ", book=" + book +
+                '}';
+    }
 }

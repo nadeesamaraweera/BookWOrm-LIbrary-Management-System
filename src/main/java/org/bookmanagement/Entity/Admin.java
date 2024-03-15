@@ -1,5 +1,6 @@
 package org.bookmanagement.Entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -13,7 +14,6 @@ import java.util.List;
 @Table(name = "Admin")
 @Data
 @NoArgsConstructor
-@ToString
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,18 +36,8 @@ public class Admin {
     private List<Branch> branches = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "admin")
-    private List<Books> books = new ArrayList<>();
+    private List<Book> book = new ArrayList<>();
 
-    public AdminDto toDto() {
-        return new AdminDto(
-                this.Id,
-                this.Name,
-                this.Username,
-                this.Password,
-                this.Email
-        );
-
-    }
 
     public Admin(int Id , String Name , String Username , String Password , String Email){
         this.Id = Id;

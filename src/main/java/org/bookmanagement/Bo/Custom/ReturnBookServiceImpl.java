@@ -31,8 +31,8 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
         memberRepository.SetSession(session);
         ArrayList<User> all = memberRepository.getAll();
         ArrayList<Integer> ids = new ArrayList<>();
-        for (User member : all) {
-            ids.add(member.getId());
+        for (User user : all) {
+            ids.add(user.getId());
         }
         session.close();
         return ids;
@@ -69,9 +69,9 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
     public BorrowBook getPendingData(String value) {
 
         session = SessionFactoryConfiguration.getInstance().getSession();
-        int m = GetIdNumber.getIdNumber("U", value);
+        int u = GetIdNumber.getIdNumber("U", value);
         memberRepository.SetSession(session);
-        User data1 = memberRepository.getData(""+m);
+        User data1 = memberRepository.getData(""+u);
 
         session.close();
 
@@ -109,7 +109,7 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
             for(Book_Transaction bookTransaction : details){
                 int id = bookTransaction.getBook().getId();
 
-                Books books = bookTransaction.getBook();
+                Book books = bookTransaction.getBook();
                 books.setAvailable("Yes");
                 System.out.println(books.getId());
                 bookRepository.SetSession(session);

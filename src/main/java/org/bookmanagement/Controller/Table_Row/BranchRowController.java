@@ -34,7 +34,7 @@ public class BranchRowController {
     BranchDto branchDto;
 
     public void setData(BranchDto branchDto){
-        Id.setText("B0"+branchDto.getId());
+        Id.setText("BR"+branchDto.getId());
         name.setText(branchDto.getName());
         locathion.setText(branchDto.getLocation());
         email.setText(branchDto.getEmail());

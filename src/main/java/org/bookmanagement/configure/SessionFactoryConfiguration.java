@@ -15,7 +15,7 @@ public class SessionFactoryConfiguration {
                 .mergeProperties(Utility.getProperties())
                 .addAnnotatedClass(User.class)
                 .addAnnotatedClass(Admin.class)
-                .addAnnotatedClass(Books.class)
+                .addAnnotatedClass(Book.class)
                 .addAnnotatedClass(Branch.class)
                 .addAnnotatedClass(BorrowBook.class)
                 .addAnnotatedClass(Book_Transaction.class)

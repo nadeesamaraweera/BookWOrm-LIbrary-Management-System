@@ -1,8 +1,8 @@
 package org.bookmanagement.Entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 import org.bookmanagement.Dto.BookDto;
 
 import javax.persistence.*;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "Book")
+@AllArgsConstructor
 @NoArgsConstructor
 @Data
-@ToString
-public class Books {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,18 +43,7 @@ public class Books {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "book")
     private List<Book_Transaction> details = new ArrayList<>();
 
-    public BookDto toDto() {
-        return new BookDto(
-                this.id,
-                this.title,
-                this.autor,
-                this.dis,
-                this.genre,
-                this.available
-        );
-    }
-
-    public Books(int id, String title, String autor, String dis, String genre, String available, Admin admin) {
+    public Book(int id, String title, String autor, String dis, String genre, String available, Admin admin) {
         this.id = id;
         this.title = title;
         this.autor = autor;

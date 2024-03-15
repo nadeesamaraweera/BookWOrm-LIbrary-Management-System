@@ -54,7 +54,7 @@ public class BorrowBookPageFormController {
 
 
     public void initialize() {
-        memberIdText.setText("M0"+MemberServiceImpl.member.getId());
+        memberIdText.setText("UI"+MemberServiceImpl.member.getId());
         Autotitle = TextFields.bindAutoCompletion(SearchBook, titleSet);
         LocalDate localDate = LocalDate.now();
         Date.setText(localDate.toString());

@@ -8,8 +8,8 @@ public class GetIdNumber {
 
         String pattern = null;
 
-        if (Type.equals("M")){
-            pattern = "M(\\d+)";
+        if (Type.equals("U")){
+            pattern = "U(\\d+)";
         }
         else if(Type.equals("A")){
             pattern = "A(\\d+)";
@@ -31,6 +31,6 @@ public class GetIdNumber {
 
 class Main{
     public static void main(String[] args) {
-        System.out.println(GetIdNumber.getIdNumber("M","M01"));
+        System.out.println(GetIdNumber.getIdNumber("U","U01"));
     }
 }

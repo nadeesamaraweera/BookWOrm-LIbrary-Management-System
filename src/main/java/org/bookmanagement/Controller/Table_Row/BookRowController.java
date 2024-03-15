@@ -38,7 +38,7 @@ public class BookRowController {
     BookDto bookDto;
 
     public void setData(BookDto bookDto){
-        this.Id.setText("Bo"+bookDto.getId());
+        this.Id.setText("BI"+bookDto.getId());
         autor.setText(bookDto.getAutor());
         avilable.setText(bookDto.getAvailable());
         title.setText(bookDto.getTitle());

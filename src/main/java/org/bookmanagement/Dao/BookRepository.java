@@ -1,7 +1,8 @@
 package org.bookmanagement.Dao;
 
-import org.bookmanagement.Entity.Books;
+import org.bookmanagement.Entity.Book;
 
-public interface BookRepository extends CrudUtil<Books>{
-    Books getData(String title);
+
+public interface BookRepository extends CrudUtil<Book>{
+    Book getData(String title);
 }

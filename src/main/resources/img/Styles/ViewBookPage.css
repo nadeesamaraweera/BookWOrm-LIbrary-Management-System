@@ -22,10 +22,10 @@
 
 .text-field1{
     -fx-min-width: 100.004px;
-    -fx-min-height: 52px;
+    -fx-min-height: 42px;
     -fx-text-fill: #000;
     -fx-font-size: 14px;
-    -fx-padding: 20px 20px 0px 20px;
+    -fx-padding: 15px 15px 0px 15px;
     -fx-background-color: #fff;
     -fx-border-width: 0px 0px 2px 0px;
     -fx-border-color: #A6A6A6;

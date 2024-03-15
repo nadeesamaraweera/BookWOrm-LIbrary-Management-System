@@ -35,9 +35,9 @@ public class ReturnBookHisPageController implements Initializable {
                 List<Book_Transaction> details = allTableData.get(i).getDetails();
 
                 for (int j = 0; j < details.size(); j++) {
-                    org.bookmanagement.Entity.Books book = details.get(j).getBook();
+                    org.bookmanagement.Entity.Book book = details.get(j).getBook();
                     controller.setData(
-                            "B0"+book.getId(),
+                            "BI"+book.getId(),
                             book.getTitle(),
                             allTableData.get(i).getStatus()
                     );

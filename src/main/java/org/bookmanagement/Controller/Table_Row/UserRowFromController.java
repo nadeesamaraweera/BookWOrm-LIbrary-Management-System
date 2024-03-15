@@ -17,7 +17,7 @@ public class UserRowFromController {
     MemberDto memberDto = null;
 
     public void setData(MemberDto userDto){
-        this.UserId.setText("Bo"+userDto.getId());
+        this.UserId.setText("UI"+userDto.getId());
         name.setText(userDto.getFull_name());
         Username.setText(userDto.getUsername());
         Password.setText(userDto.getPassword());

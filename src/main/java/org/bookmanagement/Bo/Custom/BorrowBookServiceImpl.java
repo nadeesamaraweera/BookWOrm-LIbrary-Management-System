@@ -7,8 +7,9 @@ import org.bookmanagement.Dao.BorrowBookRepository;
 import org.bookmanagement.Dao.Custom.RepositoryFactory;
 import org.bookmanagement.Dao.MemberRepository;
 import org.bookmanagement.Dto.BookDto;
+import org.bookmanagement.Entity.Book;
 import org.bookmanagement.Entity.Book_Transaction;
-import org.bookmanagement.Entity.Books;
+import org.bookmanagement.Entity.Book;
 import org.bookmanagement.Entity.BorrowBook;
 import org.bookmanagement.Entity.User;
 import org.bookmanagement.util.GetIdNumber;
@@ -41,7 +42,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     public BookDto getData(String title) {
         session = SessionFactoryConfiguration.getInstance().getSession();
         bookRepository.SetSession(session);
-        Books data = bookRepository.getData(title);
+        Book data = bookRepository.getData(title);
 
         return new BookDto(data.getId(), data.getTitle(), data.getAutor(), data.getDis(), data.getGenre(), data.getAvailable());
     }
@@ -51,7 +52,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
 
         User member = MemberServiceImpl.member;
 
-        List<Books> books = new ArrayList<>();
+        List<Book> books = new ArrayList<>();
 
         session = SessionFactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -79,7 +80,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
             borrowBookRepository.SetSession(session);
             int saved = borrowBookRepository.saved(borrowBook);
 
-            for (Books book : books) {
+            for (Book book : books) {
                 book.setAvailable("No");
                 bookRepository.SetSession(session);
                 bookRepository.Update(book);
@@ -108,7 +109,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
 
     @Override
     public boolean getPendingBook(String id){
-        int memberId = GetIdNumber.getIdNumber("M", id);
+        int memberId = GetIdNumber.getIdNumber("U", id);
         session = SessionFactoryConfiguration.getInstance().getSession();
 
         memberRepository.SetSession(session);
