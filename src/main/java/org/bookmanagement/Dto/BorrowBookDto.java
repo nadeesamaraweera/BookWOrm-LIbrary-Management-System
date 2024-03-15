@@ -24,7 +24,4 @@ import java.sql.Timestamp;
         private Timestamp addedDate;
 
         private User member;
-
-
-
-    }
+}
