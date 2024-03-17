@@ -1,6 +1,6 @@
 package org.bookmanagement.Repository.Custom;
 
-import org.bookmanagement.Repository.MemberRepository;
+import org.bookmanagement.Repository.UserRepository;
 import org.bookmanagement.Entity.User;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -8,7 +8,7 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MemberRepositoryImpl implements MemberRepository {
+public class UserRepositoryImpl implements UserRepository {
 
     private Session session;;
 
@@ -19,6 +19,10 @@ public class MemberRepositoryImpl implements MemberRepository {
         query.setParameter("username", Id);
         return query.uniqueResult();
     }
+
+//    public User getId(int id){
+//        return  session.get(User.class,id);
+//    }
 
     @Override
     public List<String> getOneData() {
@@ -37,6 +41,11 @@ public class MemberRepositoryImpl implements MemberRepository {
         Query query = session.createQuery(sqlQuery);
         List list = query.list();
         return (ArrayList<User>) list;
+    }
+
+    @Override
+    public User getId(int id){
+        return session.get(User.class, id);
     }
 
     @Override

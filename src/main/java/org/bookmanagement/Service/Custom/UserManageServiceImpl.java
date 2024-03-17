@@ -2,8 +2,8 @@ package org.bookmanagement.Service.Custom;
 
 import org.bookmanagement.Service.UserMangeService;
 import org.bookmanagement.Repository.Custom.RepositoryFactory;
-import org.bookmanagement.Repository.MemberRepository;
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Repository.UserRepository;
+import org.bookmanagement.Dto.UserDto;
 import org.bookmanagement.Entity.User;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
 import org.hibernate.Session;
@@ -13,33 +13,35 @@ import java.util.ArrayList;
 
 public class UserManageServiceImpl implements UserMangeService {
 
-    private final MemberRepository memberRepository = (MemberRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Member);
+    private final UserRepository userRepository = (UserRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.User);
     private Session session = SessionFactoryConfiguration.getInstance().getSession();
 
     private Transaction transaction;
     @Override
-    public ArrayList<MemberDto> getAll() {
+    public ArrayList<UserDto> getAll() {
         session = SessionFactoryConfiguration.getInstance().getSession();
-        memberRepository.SetSession(session);
+        userRepository.SetSession(session);
 
-        ArrayList<User> all = memberRepository.getAll();
+        ArrayList<User> all = userRepository.getAll();
 
-        ArrayList<MemberDto> admins = new ArrayList<>();
+        ArrayList<UserDto> admins = new ArrayList<>();
 
         for (User admin : all) {
-            admins.add(new MemberDto(admin.getId(), admin.getFull_name(), admin.getUsername(), admin.getPassword(), admin.getEmail()));
+            admins.add(new UserDto(admin.getId(), admin.getFull_name(), admin.getUsername(), admin.getPassword(), admin.getEmail()));
         }
 
+        session.close();
         return admins;
     }
 
     @Override
     public void delete(int Id) {
         session = SessionFactoryConfiguration.getInstance().getSession();
-        memberRepository.SetSession(session);
-        memberRepository.Delete(Id);
+        userRepository.SetSession(session);
+        userRepository.Delete(Id);
         transaction = session.beginTransaction();
         transaction.commit();
+        session.close();
     }
 
 

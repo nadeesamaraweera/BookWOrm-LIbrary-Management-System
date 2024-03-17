@@ -5,7 +5,7 @@ import org.bookmanagement.Repository.BookRepository;
 import org.bookmanagement.Repository.BookTransactionRepository;
 import org.bookmanagement.Repository.BorrowBookRepository;
 import org.bookmanagement.Repository.Custom.RepositoryFactory;
-import org.bookmanagement.Repository.MemberRepository;
+import org.bookmanagement.Repository.UserRepository;
 import org.bookmanagement.Entity.*;
 import org.bookmanagement.util.GetIdNumber;
 import org.bookmanagement.configure.SessionFactoryConfiguration;
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ReturnBookServiceImpl implements ReturnBookServiceI {
 
-    private final MemberRepository memberRepository = (MemberRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Member);
+    private final UserRepository userRepository = (UserRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.User);
 
     private final BookTransactionRepository bookTransactionRepository = (BookTransactionRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Book_Transaction);
 
@@ -28,8 +28,8 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
     @Override
     public ArrayList<Integer> getAllId(){
         session = SessionFactoryConfiguration.getInstance().getSession();
-        memberRepository.SetSession(session);
-        ArrayList<User> all = memberRepository.getAll();
+        userRepository.SetSession(session);
+        ArrayList<User> all = userRepository.getAll();
         ArrayList<Integer> ids = new ArrayList<>();
         for (User member : all) {
             ids.add(member.getId());
@@ -70,8 +70,8 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
 
         session = SessionFactoryConfiguration.getInstance().getSession();
         int u = GetIdNumber.getIdNumber("U", value);
-        memberRepository.SetSession(session);
-        User data1 = memberRepository.getData(""+u);
+        userRepository.SetSession(session);
+        User data1 = userRepository.getData(""+u);
 
         session.close();
 
@@ -79,6 +79,7 @@ public class ReturnBookServiceImpl implements ReturnBookServiceI {
         borrowBookRepository.SetSession(session);
         BorrowBook data = borrowBookRepository.getData(data1);
         session.close();
+
 
 //        List<Book_Transaction> details = data.getDetails();
 

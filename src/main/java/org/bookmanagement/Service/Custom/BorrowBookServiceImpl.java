@@ -5,10 +5,10 @@ import org.bookmanagement.Repository.BookRepository;
 import org.bookmanagement.Repository.BookTransactionRepository;
 import org.bookmanagement.Repository.BorrowBookRepository;
 import org.bookmanagement.Repository.Custom.RepositoryFactory;
-import org.bookmanagement.Repository.MemberRepository;
+import org.bookmanagement.Repository.UserRepository;
 import org.bookmanagement.Dto.BookDto;
-import org.bookmanagement.Entity.Book;
 import org.bookmanagement.Entity.Book_Transaction;
+import org.bookmanagement.Entity.Book;
 import org.bookmanagement.Entity.BorrowBook;
 import org.bookmanagement.Entity.User;
 import org.bookmanagement.util.GetIdNumber;
@@ -28,7 +28,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     private final BookRepository bookRepository = (BookRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Books);
     private final BorrowBookRepository borrowBookRepository = (BorrowBookRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.BorrowBook);
     private final BookTransactionRepository transactionRepository = (BookTransactionRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Book_Transaction);
-    private final MemberRepository memberRepository = (MemberRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Member);
+    private final UserRepository memberRepository = (UserRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.User);
 
     @Override
     public List<String> getTitles() {
@@ -49,7 +49,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     @Override
     public boolean saveTransaction(List<String> data) {
 
-        User member = MemberServiceImpl.member;
+        User user = UserServiceImpl.user;
 
         List<Book> books = new ArrayList<>();
 
@@ -71,7 +71,7 @@ public class BorrowBookServiceImpl implements BorrowBookService {
                     date,
                     "Pending",
                     null,
-                    member,
+                    user,
                     0,
                     new ArrayList<>()
             );
@@ -107,21 +107,20 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     }
 
     @Override
-    public boolean getPendingBook(String id){
+    public boolean getPendingBook(String id) {
         int memberId = GetIdNumber.getIdNumber("U", id);
         session = SessionFactoryConfiguration.getInstance().getSession();
 
         memberRepository.SetSession(session);
-        User member = memberRepository.getData(""+memberId);
+        User user = memberRepository.getId(memberId);
 
         borrowBookRepository.SetSession(session);
-        BorrowBook data = borrowBookRepository.getPendingBook(member);
+        BorrowBook data = borrowBookRepository.getPendingBook(user);
         session.close();
 
-        if(data == null){
+        if (data == null) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

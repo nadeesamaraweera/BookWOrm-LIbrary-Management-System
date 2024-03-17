@@ -10,7 +10,7 @@ import javafx.scene.layout.VBox;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
 import org.controlsfx.control.textfield.TextFields;
 import org.bookmanagement.Service.BorrowBookService;
-import org.bookmanagement.Service.Custom.MemberServiceImpl;
+import org.bookmanagement.Service.Custom.UserServiceImpl;
 import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Controller.Table_Row.BorrowBookRowController;
 
@@ -52,7 +52,7 @@ public class BorrowBookPageFormController {
 
 
     public void initialize() {
-        memberIdText.setText("UI"+MemberServiceImpl.member.getId());
+        memberIdText.setText("UI"+ UserServiceImpl.user.getId());
         Autotitle = TextFields.bindAutoCompletion(SearchBook, titleSet);
         LocalDate localDate = LocalDate.now();
         Date.setText(localDate.toString());
@@ -105,6 +105,8 @@ public class BorrowBookPageFormController {
     void gtOnActhion(ActionEvent event) {
         saveData();
     }
+
+
 
     void saveData(){
         if (!getPendingBook()){

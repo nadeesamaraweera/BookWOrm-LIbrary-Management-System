@@ -1,7 +1,7 @@
 package org.bookmanagement.Service;
 
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Dto.UserDto;
 
 public interface RegisterService extends SuperService {
-    int Register(MemberDto member);
+    int Register(UserDto member);
 }

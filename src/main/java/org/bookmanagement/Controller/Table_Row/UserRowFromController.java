@@ -6,7 +6,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import org.bookmanagement.Service.ServiceFactor;
 import org.bookmanagement.Service.UserMangeService;
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Dto.UserDto;
 
 public class UserRowFromController {
     public Label UserId;
@@ -14,9 +14,9 @@ public class UserRowFromController {
     public Label Username;
     public Label Password;
 
-    MemberDto memberDto = null;
+    UserDto memberDto = null;
 
-    public void setData(MemberDto userDto){
+    public void setData(UserDto userDto){
         this.UserId.setText("UI"+userDto.getId());
         name.setText(userDto.getFull_name());
         Username.setText(userDto.getUsername());

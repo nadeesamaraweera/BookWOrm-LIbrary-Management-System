@@ -14,7 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.bookmanagement.Service.RegisterService;
 import org.bookmanagement.Service.ServiceFactor;
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Dto.UserDto;
 import org.bookmanagement.util.Validation;
 
 import java.io.IOException;
@@ -124,7 +124,7 @@ public class RegisterPageFormController implements Initializable {
     }
 
     private void Register() {
-        int register = registerService.Register(new MemberDto(1,NameText.getText(), usernameText.getText(), PasswordFild.getText(), emailText.getText()));
+        int register = registerService.Register(new UserDto(1,NameText.getText(), usernameText.getText(), PasswordFild.getText(), emailText.getText()));
 
         if (register != -1){
 

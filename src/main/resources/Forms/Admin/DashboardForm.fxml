@@ -164,7 +164,7 @@
             </LinearGradient>
          </fill>
       </Text>
-      <Label fx:id="BookCount" layoutX="100.0" layoutY="83.0" text="1000" textFill="#a44108">
+      <Label fx:id="BookCount" layoutX="100.0" layoutY="83.0" style="-fx-background-color: #fff;" text="1000" textFill="#a44108">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -179,7 +179,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="PaymentCount" layoutX="232.0" layoutY="570.0" text="1000" textFill="#a44108">
+      <Label fx:id="PaymentCount" layoutX="222.0" layoutY="570.0" text="1000" textFill="#a44108">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -232,6 +232,11 @@
       <ImageView fitHeight="180.0" fitWidth="252.0" layoutX="660.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/profile%20photo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="60.0" layoutX="866.0" layoutY="23.0" onMouseClicked="#bellBtnOnActhion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/bell.png" />
          </image>
       </ImageView>
    </children>

@@ -40,8 +40,8 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <ComboBox fx:id="MemberIdCombo" blendMode="MULTIPLY" layoutX="82.0" layoutY="145.0" onAction="#ComboOnActhion" prefHeight="58.0" prefWidth="376.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
-      <TextField fx:id="ReturnData" blendMode="MULTIPLY" layoutX="86.0" layoutY="298.0" prefHeight="49.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
+      <ComboBox fx:id="MemberIdCombo" blendMode="MULTIPLY" layoutX="82.0" layoutY="151.0" onAction="#ComboOnAction" prefHeight="58.0" prefWidth="376.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
+      <TextField fx:id="ReturnData" blendMode="MULTIPLY" layoutX="86.0" layoutY="302.0" prefHeight="49.0" prefWidth="371.0" styleClass="text-field1" stylesheets="@../../img/Styles/ViewBookPage.css" />
       <Text fill="#3b1a04db" layoutX="592.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Count" wrappingWidth="161.5977020263672">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -75,6 +75,6 @@
             <Image url="@../../img/returnbutton.png" />
          </image>
       </ImageView>
-      <Button layoutX="577.0" layoutY="448.0" mnemonicParsing="false" onAction="#returnBtnOnActhion" opacity="0.0" prefHeight="50.0" prefWidth="149.0" text="Button" />
+      <Button layoutX="577.0" layoutY="453.0" mnemonicParsing="false" onAction="#returnBtnOnActhion" opacity="0.0" prefHeight="50.0" prefWidth="149.0" text="Button" />
    </children>
 </AnchorPane>

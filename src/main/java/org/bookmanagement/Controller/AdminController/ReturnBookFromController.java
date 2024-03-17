@@ -17,19 +17,19 @@ import java.util.List;
 
 public class ReturnBookFromController {
     @FXML
-    private TextField BookCount;
+    public TextField BookCount;
 
     @FXML
-    private TextField Date;
+    public TextField Date;
 
     @FXML
-    private ComboBox<String> MemberIdCombo;
+    public ComboBox<String> MemberIdCombo;
 
     @FXML
-    private TextField Payment;
+    public TextField Payment;
 
     @FXML
-    private TextField ReturnData;
+    public TextField ReturnData;
 
     public final ReturnBookServiceI returnBookServiceI = (ReturnBookServiceI) ServiceFactor.getBoFactory().getBo(ServiceFactor.BoType.Return_Book);
 
@@ -52,10 +52,14 @@ public class ReturnBookFromController {
         if(returned){
             new Alert(Alert.AlertType.CONFIRMATION,"Book Returned").show();
         }
+        else {
+            new Alert(Alert.AlertType.ERROR,"Book NOT  Returned").show();
+        }
+
     }
 
     @FXML
-    void ComboOnActhion(ActionEvent event) {
+    void ComboOnAction(ActionEvent event) {
         BorrowBook pendingData = returnBookServiceI.getPendingData(MemberIdCombo.getValue());
         BookCount.setText(pendingData.getQty() + "");
         borrowBook = pendingData;

@@ -9,8 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
 import org.controlsfx.control.textfield.TextFields;
-import org.bookmanagement.Service.SearchBookService;
 import org.bookmanagement.Service.ServiceFactor;
+import org.bookmanagement.Service.SearchBookService;
 import org.bookmanagement.Dto.BookDto;
 
 import java.net.URL;
@@ -54,7 +54,7 @@ public class BookViewFormController implements Initializable {
         DisText.setText(bookDto.getDis());
         genreText.setText(bookDto.getGenre());
 
-        if(bookDto.getAvailable().equals("yes")){
+        if(bookDto.getAvailable().equals("Yes")){
             lable.setStyle("-fx-background-color: green");
             lableText.setText("Yes");
         }

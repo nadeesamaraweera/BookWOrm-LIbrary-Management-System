@@ -1,11 +1,11 @@
 package org.bookmanagement.Service;
 
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Dto.UserDto;
 
 public interface MemberDashboardServer extends SuperService{
-    MemberDto getData(String username);
+    UserDto getData(String username);
 
-    void Update(MemberDto memberDto);
+    void Update(UserDto memberDto);
 
     int BookCount(String memberUsername);
 }

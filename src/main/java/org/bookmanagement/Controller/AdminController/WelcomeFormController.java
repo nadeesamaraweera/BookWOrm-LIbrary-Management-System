@@ -57,7 +57,7 @@ public class WelcomeFormController implements Initializable {
                 Stage stage1= (Stage) progess.getScene().getWindow();
                 stage1.close();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/Forms/LoginPage.fxml"))));
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/Forms/Admin/AdminRegisterForm.fxml"))));
                 stage.setMaximized(false);
                 stage.centerOnScreen();
                 stage.show();

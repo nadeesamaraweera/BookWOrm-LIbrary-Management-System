@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.SneakyThrows;
@@ -39,9 +40,9 @@ public class ManageBookFormController implements Initializable {
     @SneakyThrows
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Autotitle = TextFields.bindAutoCompletion(search,titleSet);
+        Autotitle = TextFields.bindAutoCompletion(search, titleSet);
         javafx.scene.control.CheckBox checkBox = new CheckBox();
-        checkBox.setPrefSize(500,500);
+        checkBox.setPrefSize(500, 500);
 
         this.CheckBox = checkBox;
         LoadTable();
@@ -78,7 +79,7 @@ public class ManageBookFormController implements Initializable {
         String text = search.getText();
         BookDto bookDto = manageBookService.search(text);
 
-        if (bookDto != null){
+        if (bookDto != null) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/View/ViewBook.fxml"));
             Parent parent = null;
             try {
@@ -92,9 +93,9 @@ public class ManageBookFormController implements Initializable {
             stage.setScene(new Scene(parent));
             stage.centerOnScreen();
             stage.showAndWait();
-        }
-        else {
-            new Alert(Alert.AlertType.ERROR,"Not Found").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Not Found").show();
         }
     }
+
 }

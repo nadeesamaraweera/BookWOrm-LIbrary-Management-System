@@ -23,7 +23,7 @@ public class BorrowBookRowController {
 
     void SetId(String title){
         BookDto data = borrowBookService.getData(title);
-        Id.setText("B0"+data.getId());
+        Id.setText("BR"+data.getId());
     }
 
     public void DeleteBtnOnActhion(ActionEvent actionEvent) {

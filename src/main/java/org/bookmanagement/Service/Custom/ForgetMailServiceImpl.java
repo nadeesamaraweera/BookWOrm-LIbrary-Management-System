@@ -7,7 +7,7 @@ import org.bookmanagement.Controller.ForgetPassWord.ForgetPassWordFormController
 import org.bookmanagement.Controller.LoginPageController;
 import org.bookmanagement.Repository.AdminRepository;
 import org.bookmanagement.Repository.Custom.RepositoryFactory;
-import org.bookmanagement.Repository.MemberRepository;
+import org.bookmanagement.Repository.UserRepository;
 import org.bookmanagement.Dto.AdminDto;
 import org.bookmanagement.Entity.Admin;
 import org.bookmanagement.Entity.User;
@@ -19,7 +19,7 @@ import java.util.Random;
 
 public class ForgetMailServiceImpl implements ForgetMailService {
 
-    private final MemberRepository memberRepository = (MemberRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.Member);
+    private final UserRepository userRepository = (UserRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.User);
 
     private final AdminRepository adminRepository = (AdminRepository) RepositoryFactory.getDaoFactory().getDao(RepositoryFactory.DaoType.admin);
     private Session session;
@@ -29,9 +29,9 @@ public class ForgetMailServiceImpl implements ForgetMailService {
         session = SessionFactoryConfiguration.getInstance().getSession();
 
         if (user.equals("User")){
-            memberRepository.SetSession(session);
+            userRepository.SetSession(session);
 
-            User checkEmail = memberRepository.CheckEmail(email);
+            User checkEmail = userRepository.CheckEmail(email);
 
             if (checkEmail != null){
                 //send email

@@ -37,6 +37,7 @@ public class User {
     private List<BorrowBook> transactions = new ArrayList<>();
 
     public User(int Id,String full_name, String username, String password, String email) {
+        this.id=Id;
         this.full_name = full_name;
         this.username = username;
         this.password = password;

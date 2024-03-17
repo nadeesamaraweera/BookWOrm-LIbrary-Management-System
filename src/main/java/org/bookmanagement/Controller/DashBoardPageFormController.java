@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import org.bookmanagement.Service.MemberDashboardServer;
 import org.bookmanagement.Service.ServiceFactor;
-import org.bookmanagement.Dto.MemberDto;
+import org.bookmanagement.Dto.UserDto;
 import org.bookmanagement.util.Validation;
 
 import java.net.URL;
@@ -64,7 +64,7 @@ public class DashBoardPageFormController implements Initializable {
     String name = "";
 
     void SetData(){
-        MemberDto data = memberDashboardServer.getData(LoginPageController.memberUsername);
+        UserDto data = memberDashboardServer.getData(LoginPageController.memberUsername);
         UsernameText.setText(data.getUsername());
         emailText.setText(data.getEmail());
         PasswordTextFild.setText(data.getPassword());
@@ -93,7 +93,7 @@ public class DashBoardPageFormController implements Initializable {
 
     void ChangePassword(){
         if (Validation.isValidEmail(emailText.getText())){
-            memberDashboardServer.Update(new MemberDto(Id,name,UsernameText.getText(),PasswordFild.getText(),emailText.getText()));
+            memberDashboardServer.Update(new UserDto(Id,name,UsernameText.getText(),PasswordFild.getText(),emailText.getText()));
             new Alert(Alert.AlertType.INFORMATION,"Password Changed").show();
         }
         else {

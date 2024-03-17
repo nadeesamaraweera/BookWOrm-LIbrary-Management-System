@@ -31,17 +31,6 @@ public class UserManageFromController {
         });
     }
 
-    public void AddUserOnActhion(ActionEvent actionEvent) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Forms/Table_Row/Save/SaveUser.fxml"));
-        try {
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 
 }

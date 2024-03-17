@@ -11,13 +11,13 @@ public class RepositoryFactory {
     }
 
     public enum DaoType{
-        Member ,admin, Books, Branch,Book_Transaction, BorrowBook
+        User ,admin, Books, Branch,Book_Transaction, BorrowBook, Pending
     }
 
     public SuperRepository getDao(DaoType daoType ){
         switch ( daoType ){
-            case Member :
-                return new MemberRepositoryImpl();
+            case  User:
+                return new UserRepositoryImpl();
 
             case admin:
                 return new AdminRepositoryImpl();
@@ -29,6 +29,9 @@ public class RepositoryFactory {
                 return new BookTransactionRepositoryImpl();
                 case BorrowBook:
                     return new BorrowBookRepositoryImpl();
+            case Pending:
+                return new CustomRepositoryImpl();
+
             default:
                 return null;
         }

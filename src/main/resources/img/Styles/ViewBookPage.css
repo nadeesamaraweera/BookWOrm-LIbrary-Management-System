@@ -2,7 +2,7 @@
     -fx-min-width: 450px;
     -fx-min-height: 20px;
     -fx-background-radius: 16px;
-    -fx-background-color: rgba(245, 199, 65, 0.96);
+    -fx-background-color: rgba(238, 204, 106, 0.96);
     -fx-font-family: Inter;
     -fx-font-size: 25x;
     -fx-padding: 0px 0px 0px 60px;
@@ -22,9 +22,9 @@
 
 .text-field1{
     -fx-min-width: 100.004px;
-    -fx-min-height: 42px;
+    -fx-min-height: 44px;
     -fx-text-fill: #000;
-    -fx-font-size: 14px;
+    -fx-font-size: 16px;
     -fx-padding: 15px 15px 0px 15px;
     -fx-background-color: #fff;
     -fx-border-width: 0px 0px 2px 0px;
